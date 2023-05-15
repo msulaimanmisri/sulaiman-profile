@@ -4,7 +4,7 @@
   <div class="container">
     <div class="py-5">
       <h1 class="lead display-3">
-        Your Next Full Stack Laravel Developer.
+        Laravel + Vue + Vite
       </h1>
 
       <p class="lead fs-2">

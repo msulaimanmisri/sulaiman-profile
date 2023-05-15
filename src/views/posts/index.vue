@@ -1,4 +1,22 @@
-<script setup></script>
+<script setup>
+import { ref, onMounted } from 'vue';
+import api from '../../api';
+
+//define state
+const posts = ref([]);
+
+//method fetchDataPosts
+const fetchDataPosts = async () => {
+    await api.get('/api/posts')
+        .then(response => {
+            posts.value = response.data.data.data
+        });
+}
+
+onMounted(() => {
+    fetchDataPosts();
+});
+</script>
 
 <template>
     <div class="container mt-5 mb-5">
