@@ -14,7 +14,7 @@
 
       <div class="mt-5">
         <img src="https://sulaimanmisri.com/wp-content/uploads/2023/01/sulaiman-lead-dev.jpg"
-          class="img-fluid rounded-4 shadow" alt="sulaiman-misri" style="width: 100%;
+          class="img-fluid rounded-4 shadow" loading="lazy" alt="sulaiman-misri" style="width: 100%;
                                                             height: 50vh;
                                                             object-fit: cover;
                                                             transform: scale(1) translateZ(0);
