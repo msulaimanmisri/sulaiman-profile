@@ -28,6 +28,14 @@
                 Having more than 7 years working experience, he has involved in many projects including E-Commerce, Learning
                 Management System, Mobile Application, Interactive Website, Blog, API Integration, and many more.
             </p>
+
+            <p class="lead text-muted text-body my-5">
+                Other than technical skills, he also currently act as a Lead Developer 2 where he is in charge on Developer resources.
+            </p>
+
+            <p class="lead text-muted text-body my-5">
+                Outside working hour, he is teaching everyone who are interested in learning WordPress and Web Development through application named <a href="https://bit.ly/daftar-kelas-design" target="_blank">Kelas Design</a>
+            </p>
         </div>
     </div>
 </template>
