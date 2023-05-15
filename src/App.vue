@@ -14,25 +14,25 @@
 
             <li class="nav-item text-main fs-5">
               <router-link :to="{ name: 'about.index' }" class="nav-link" aria-current="page">
-                About
+                About.
               </router-link>
             </li>
 
             <li class="nav-item text-main fs-5">
               <router-link :to="{ name: 'stack.index' }" class="nav-link" aria-current="page">
-                Stack
+                Stack.
               </router-link>
             </li>
 
             <li class="nav-item text-main fs-5">
               <router-link :to="{ name: 'project.index' }" class="nav-link" aria-current="page">
-                Project
+                Project.
               </router-link>
             </li>
 
             <li class="nav-item text-main fs-5">
               <router-link :to="{ name: 'posts.index' }" class="nav-link" aria-current="page">Blog
-                Posts</router-link>
+                Posts.</router-link>
             </li>
           </ul>
 
