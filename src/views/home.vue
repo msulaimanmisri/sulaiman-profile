@@ -8,7 +8,7 @@
       </h1>
 
       <p class="lead text-muted text-body">
-        With more than 7 years working experience, I'm your next developer who will translate your next big idea into
+        With more than 7 years working experience, He's your next developer who will translate your next big idea into
         reality.
       </p>
 

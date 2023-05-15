@@ -10,18 +10,20 @@
             <hr>
 
             <p class="lead text-muted text-body">
-                Think PHP, Think Sulaiman.
+                Think Website, think Sulaiman. He's probably the best web developer for your business.
             </p>
 
             <p class="lead text-muted text-body my-5">
                 Working as a Software Engineer at Kuala Lumpur, Sulaiman is a Progress-Centric person where he
                 always
-                monitor his work progress including his personal technical skills.
+                monitor his work progress including his personal technical skills. Thanks to that, with that attitude, he's
+                always communicate with his stakeholder or clients regarding the website or system that he build.
             </p>
 
             <p class="lead text-muted text-body my-5">
                 His speciality is in Web Development area where his main tools is WordPress, Laravel, Bootstrap CSS, jQuery
-                and Vue Js. Like this website, he's built it using Vue Js and Bootstrap CSS.
+                and Vue Js. <span class="text-decoration-underline fw-bold">Like this website, he's build it using Vue Js
+                    and Bootstrap CSS.</span>
             </p>
 
             <p class="lead text-muted text-body my-5">
@@ -30,13 +32,15 @@
             </p>
 
             <p class="lead text-muted text-body my-5">
-                Other than technical skills, he also currently act as a Lead Developer 2 where he is in charge on Developer resources.
+                Other than technical skills, he also currently act as a Lead Developer 2 where he is in charge on Developer
+                resources and Server Architecture.
             </p>
 
             <p class="lead text-muted text-body my-5">
-                Outside working hour, he is teaching everyone who are interested in learning WordPress and Web Development through application named <a href="https://bit.ly/daftar-kelas-design" target="_blank">Kelas Design</a>
+                Outside working hour, he is teaching everyone who are interested in learning WordPress and Web Development
+                through application named <a href="https://bit.ly/daftar-kelas-design"
+                    target="_blank">Kelas Design</a>
             </p>
         </div>
-    </div>
-</template>
+</div></template>
 

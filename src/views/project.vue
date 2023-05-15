@@ -4,7 +4,7 @@
     <div class="container">
         <div class="py-5">
             <h1 class="fw-bolder text-muted display-3 text-main">
-                Past project that he's involved.
+                Project that he's involved.
             </h1>
 
             <hr>

@@ -4,14 +4,14 @@
     <div class="container">
         <div class="py-5">
             <h1 class="fw-bolder text-muted display-3 text-main">
-                My Development Stack
+                Sulaiman's Development Stack
             </h1>
 
             <hr>
 
             <div class="primaryStack">
                 <p class="lead text-body text-muted">
-                    This is my Primary Web Development stack.
+                    This is his Primary Web Development stack.
                 </p>
 
                 <div class="">
