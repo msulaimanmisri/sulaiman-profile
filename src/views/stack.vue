@@ -27,7 +27,7 @@
                 </div>
             </div>
 
-            <div class="secondaryStack mt-5">
+            <div class="secondaryStack my-5">
                 <p class="lead text-body text-muted">
                     But not limited to that.
                 </p>

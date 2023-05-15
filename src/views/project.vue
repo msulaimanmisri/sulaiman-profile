@@ -3,31 +3,73 @@
 <template>
     <div class="container">
         <div class="py-5">
-            <h1 class="fw-bolder text-warning display-3 monospace">
-                Past project that I've involved.
+            <h1 class="fw-bolder text-muted display-3 text-main">
+                Past project that he's involved.
             </h1>
 
             <hr>
 
-            <p class="lead fs-2">
-                Think PHP, Think Sulaiman.
+            <p class="lead text-muted text-body">
+                From small organization to Big Organization. Sulaiman has collaborate with them to make thier businesses or work easy. Here's the lists.
             </p>
 
-            <p class="lead fs-2 my-5">
-                Working as a Software Engineer at Kuala Lumpur, Sulaiman is a Progress-Centric person where he
-                always
-                monitor his work progress including his personal technical skills.
-            </p>
+            <div class="">
+            <div class="row">
+                <div class="col-md-6 firstRow">
+                    <div class="card border-0 card-body rounded-3 shadow-sm mt-3 text-body fs-5 h-100">
+                        <ul class="mb-0">
+                            <li class="my-3">Kementerian Pendidikan Malaysia</li>
+                            <li class="my-3">Kyoto Kimono Yuzen</li>
+                            <li class="my-3">ASEAN Schools Games 2018</li>
+                            <li class="my-3">Perbadanan Harta Intelek (MyIPO)</li>
+                            <li class="my-3">Universiti Malaysia Sarawak (UNIMAS)</li>
+                            <li class="my-3">Ardent Educational Sdn Bhd</li>
+                            <li class="my-3">Kangaroo Math</li>
+                            <li class="my-3">Beaver Computational Thinking</li>
+                            <li class="my-3">Kancil Science Malaysia</li>
+                            <li class="my-3">Kijang Economics Malaysia</li>
+                            <li class="my-3">Malaysian Earth Science Olympiad (MyESO)</li>
+                            <li class="my-3">KlikWeb</li>
+                            <li class="my-3">Dragtify</li>
+                            <li class="my-3">Ahlan Academy</li>
+                            <li class="my-3">Plus-PM</li>
+                            <li class="my-3">RenoRumah</li>
+                            <li class="my-3">The Japanese Chamber Of Trade & Industry, Malaysia</li>
+                            <li class="my-3">Dr Strech Singapore</li>
+                            <li class="my-3">Sankyo Machine Tool</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <p class="lead fs-2 my-5">
-                His speciality is in Web Development area where his main tools is WordPress, Laravel, Bootstrap CSS, jQuery
-                and Vue Js. Like this website, he's built it using Vue Js and Bootstrap CSS.
-            </p>
+                <div class="col-md-6 secondRow">
+                    <div class="card border-0 card-body rounded-3 shadow-sm mt-3 text-body fs-5 h-100">
+                        <ul class="mb-0">
+                            <li class="my-3">Malaysian Computational Linguistics Olympiad (MyCLO)</li>
+                            <li class="my-3">Malaysia Astronomy Olympiad (MyAO)</li>
+                            <li class="my-3">Malaysian Economics Olympiad (MyEO)</li>
+                            <li class="my-3">IbuAna Bookstore</li>
+                            <li class="my-3">AsiaQuest Malaysia</li>
+                            <li class="my-3">Pro Academy</li>
+                            <li class="my-3">Kiah.Store</li>
+                            <li class="my-3">Contest Hub</li>
+                            <li class="my-3">Young Coder Malaysia</li>
+                            <li class="my-3">Kelas Design</li>
+                            <li class="my-3">Bina Minda Commerce</li>
+                            <li class="my-3">Bina Funnel</li>
+                            <li class="my-3">Dewan Masyarakat DBP</li>
+                            <li class="my-3">Dewan Sastera DBP</li>
+                            <li class="my-3">Dewan Ekonomi DBP</li>
+                            <li class="my-3">Dewan Bahasa DBP</li>
+                            <li class="my-3">Akademi DBP</li>
+                            <li class="my-3">Malay Literature DBP</li>
+                            <li class="my-3">Jurnal Bahasa DBP</li>
+                            <li class="my-3">Jurnal Bahasa DBP</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <p class="lead fs-2 my-5">
-                Having more than 7 years working experience, he has involved in many projects including E-Commerce, Learning
-                Management System, Mobile Application, Interactive Website, Blog, API Integration, and many more.
-            </p>
         </div>
     </div>
 </template>
