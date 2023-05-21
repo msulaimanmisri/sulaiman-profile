@@ -26,6 +26,12 @@ const routes = [
     },
 
     {
+        path: '/personal-project',
+        name: 'personal-project.index',
+        component: () => import( /* webpackChunkName: "home" */ '../views/personal-project.vue')
+    },
+
+    {
         path: '/posts',
         name: 'posts.index',
         component: () => import( /* webpackChunkName: "index" */ '../views/posts/index.vue')
