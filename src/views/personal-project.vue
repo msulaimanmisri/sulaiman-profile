@@ -170,6 +170,26 @@
                     </div>
                 </div>
 
+                <div class="col-md-4 mt-4 wordPress Local">
+                    <div class="card border-0 shadow-sm rounded-3">
+                        <div class="card-body">
+                            <h4 class="text-muted">
+                                WordPress Sandbox
+                            </h4>
+
+                            <p class="p-0 text-muted">
+                                Try any WordPress latest version or debug your plugin here without need to install anything!
+                            </p>
+                        </div>
+
+                        <div class="card-footer border-top">
+                            <a href="https://wordpress.sulaimanmisri.com" target="_blank"
+                                class="btn btn-primary btn-stm">Visit
+                                Site</a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-md-4 mt-4 comingSoon ">
                     <div class="card border-0 shadow-sm rounded-3">
                         <div class="card-body">
