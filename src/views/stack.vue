@@ -18,9 +18,10 @@
                     <span class="badge bg-danger fs-3 m-1">Laravel</span>
                     <span class="badge bg-dark fs-3 m-1">WordPress</span>
                     <span class="badge bg-primary fs-3 m-1">PHP</span>
-                    <span class="badge bg-secondary fs-3 m-1">jQuery</span>
                     <span class="badge bg-warning fs-3 m-1">JavaScript</span>
+                    <span class="badge bg-secondary fs-3 m-1">jQuery</span>
                     <span class="badge bg-success fs-3 m-1">Vue Js</span>
+                    <span class="badge bg-primary fs-3 m-1">React Js</span>
                     <span class="badge bg-primary fs-3 m-1">Bootstrap CSS</span>
                     <span class="badge bg-primary fs-3 m-1">Digital Ocean</span>
                     <span class="badge bg-dark fs-3 m-1">RunCloud</span>
@@ -73,4 +74,3 @@
         </div>
     </div>
 </template>
-
