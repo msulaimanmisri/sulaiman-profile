@@ -87,6 +87,41 @@ import Card from "../components/Card.vue";
             project-url="https://wordpress.sulaimanmisri.com" />
         </div>
 
+        <div id="smRouteApi" class="col-md-4 mt-4">
+          <Card
+            project-title="WordPress Route API"
+            project-description="If you want to fetch data from WordPress via API, you should use this plugin to make your life easier"
+            project-url="https://github.com/msulaimanmisri/sm-route-api" />
+        </div>
+
+        <div id="smMakePWA" class="col-md-4 mt-4">
+          <Card
+            project-title="WordPress PWA"
+            project-description="Turns your WordPress site into Desktop or Mobile Apps in single click!"
+            project-url="https://github.com/msulaimanmisri/sm-make-pwa" />
+        </div>
+
+        <div id="redirectWooCommerce" class="col-md-4 mt-4">
+          <Card
+            project-title="WooCommerce Redirect"
+            project-description="This simple plugin will allowed WooCommerce users to Redirect their customer into Checkout page without need to load the Cart Page"
+            project-url="https://github.com/msulaimanmisri/wp-woo-redirect-checkout" />
+        </div>
+
+        <div id="smCustomAnalytics" class="col-md-4 mt-4">
+          <Card
+            project-title="WordPress Custom Analytics"
+            project-description="This simple plugin will allowed you to print out how many people has visited to your website by using shortcode called [sm_tracking]"
+            project-url="https://github.com/msulaimanmisri/sm-custom-analytics" />
+        </div>
+
+        <div id="smErrorLog" class="col-md-4 mt-4">
+          <Card
+            project-title="WordPress Debug"
+            project-description="This plugin will make your WP_DEBUG turn into `true` and you can check in the dashboard or your `wp-content` folder the error"
+            project-url="https://github.com/msulaimanmisri/SM-Error-Log" />
+        </div>
+
         <div id="belajarAlQuran" class="col-md-4 mt-4">
           <Card
             project-title="Belajar surah dalam Al-Quran"
