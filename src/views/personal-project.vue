@@ -1,214 +1,120 @@
-<script setup></script>
+<script setup>
+import Card from "../components/Card.vue";
+</script>
 
 <template>
-    <div class="container">
-        <div class="py-5">
-            <h1 class="fw-bolder text-muted display-3 text-main">
-                He just love to develop for himself and others.
-            </h1>
+  <div class="container">
+    <div class="py-5">
+      <h1 class="fw-bolder text-muted display-3 text-main">
+        He just love to develop for himself and others.
+      </h1>
 
-            <hr>
+      <hr />
 
-            <p class="lead text-muted text-body">
-                In his freetime, he's building these projects. You can use if for free!
-            </p>
+      <p class="lead text-muted text-body">
+        In his freetime, he's building these projects. You can use if for free!
+      </p>
 
-
-            <div class="row">
-                <div class="col-md-4 mt-4 kelasDesign">
-                    <div class="card border-0 shadow-sm rounded-3 h-100">
-                        <div class="card-body">
-                            <h4 class="text-muted">
-                                Kelas Design
-                            </h4>
-
-                            <p class="p-0 text-muted">
-                                Application for you to learn WordPress & Web Development
-                            </p>
-                        </div>
-
-                        <div class="card-footer border-top">
-                            <a href="https://bit.ly/daftar-kelas-design" target="_blank"
-                                class="btn btn-primary btn-stm">Visit Site</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mt-4 kiraGaji">
-                    <div class="card border-0 shadow-sm rounded-3">
-                        <div class="card-body">
-                            <h4 class="text-muted">
-                                Kira Gaji
-                            </h4>
-
-                            <p class="p-0 text-muted">
-                                Application for you to calculate how much salary you gain. And How you can calculate your
-                                freelance rate.
-                            </p>
-                        </div>
-
-                        <div class="card-footer border-top">
-                            <a href="https://kira.sulaimanmisri.com" target="_blank" class="btn btn-primary btn-stm">Visit
-                                Site</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mt-4 devPath">
-                    <div class="card border-0 shadow-sm rounded-3">
-                        <div class="card-body">
-                            <h4 class="text-muted">
-                                Dev Path
-                            </h4>
-
-                            <p class="p-0 text-muted">
-                                Website for you who want to learn how to code, but don't know the path. This is my personal
-                                path.
-                            </p>
-                        </div>
-
-                        <div class="card-footer border-top">
-                            <a href="https://dev.sulaimanmisri.com/" target="_blank" class="btn btn-primary btn-stm">Visit
-                                Site</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mt-4 passwordGenerator">
-                    <div class="card border-0 shadow-sm rounded-3">
-                        <div class="card-body">
-                            <h4 class="text-muted">
-                                Pilihan Raya Umum 15
-                            </h4>
-
-                            <p class="p-0 text-muted">
-                                Website for you to find your choosen candidate based on Location.
-                            </p>
-                        </div>
-
-                        <div class="card-footer border-top">
-                            <a href="https://pru15.sulaimanmisri.com/" target="_blank" class="btn btn-primary btn-stm">Visit
-                                Site</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mt-4 pru15">
-                    <div class="card border-0 shadow-sm rounded-3">
-                        <div class="card-body">
-                            <h4 class="text-muted">
-                                Password Generator
-                            </h4>
-
-                            <p class="p-0 text-muted">
-                                Simple website that can generate a very secure password without saving it
-                            </p>
-                        </div>
-
-                        <div class="card-footer border-top">
-                            <a href="https://pass.sulaimanmisri.com/" target="_blank" class="btn btn-primary btn-stm">Visit
-                                Site</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mt-4 smPrefetch">
-                    <div class="card border-0 shadow-sm rounded-3">
-                        <div class="card-body">
-                            <h4 class="text-muted">
-                                SM Prefetch
-                            </h4>
-
-                            <p class="p-0 text-muted">
-                                A WordPress plugin that can turns your website into a blazing fast website using prefetch
-                                technology.
-                            </p>
-                        </div>
-
-                        <div class="card-footer border-top">
-                            <a href="https://wordpress.org/plugins/sm-prefetch/" target="_blank"
-                                class="btn btn-primary btn-stm">Visit Site</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mt-4 smScrollbar">
-                    <div class="card border-0 shadow-sm rounded-3">
-                        <div class="card-body">
-                            <h4 class="text-muted">
-                                SM Scrollbar
-                            </h4>
-
-                            <p class="p-0 text-muted">
-                                A WordPress plugin that can make your windows browser scrollbar look nice
-                            </p>
-                        </div>
-
-                        <div class="card-footer border-top">
-                            <a href="https://wordpress.org/plugins/sm-scrollbar/" target="_blank"
-                                class="btn btn-primary btn-stm">Visit Site</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mt-4 cariGambo">
-                    <div class="card border-0 shadow-sm rounded-3">
-                        <div class="card-body">
-                            <h4 class="text-muted">
-                                Cari Gambo.
-                            </h4>
-
-                            <p class="p-0 text-muted">
-                                A simple web application where you can search any Royalty-Free images
-                            </p>
-                        </div>
-
-                        <div class="card-footer border-top">
-                            <a href="https://gambo.sulaimanmisri.com" target="_blank" class="btn btn-primary btn-stm">Visit
-                                Site</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mt-4 wordPress Local">
-                    <div class="card border-0 shadow-sm rounded-3">
-                        <div class="card-body">
-                            <h4 class="text-muted">
-                                WordPress Sandbox
-                            </h4>
-
-                            <p class="p-0 text-muted">
-                                Try any WordPress latest version or debug your plugin here without need to install anything!
-                            </p>
-                        </div>
-
-                        <div class="card-footer border-top">
-                            <a href="https://wordpress.sulaimanmisri.com" target="_blank"
-                                class="btn btn-primary btn-stm">Visit
-                                Site</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mt-4 comingSoon ">
-                    <div class="card border-0 shadow-sm rounded-3">
-                        <div class="card-body">
-                            <h4 class="text-muted text-main">
-                                Coming Soon
-                            </h4>
-
-                            <p class="p-0 text-muted">
-                                Sulaiman will create more project later for you to use. Check again later.
-                            </p>
-                        </div>
-
-                        <div class="card-footer border-top">
-                            <a href="" target="_blank" class="btn btn-outline-secondary text-muted btn-stm">Later..</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="row">
+        <div id="kelasDesign" class="col-md-4 mt-4">
+          <Card
+            project-title="Kelas Design"
+            project-description="Application for you to learn WordPress & Web Development"
+            project-url="https://kelasdesign.com/?ref=evfiC9vL" />
         </div>
-    </div>
-</template>
 
+        <div id="kiraGaji" class="col-md-4 mt-4">
+          <Card
+            project-title="Kira Gaji"
+            project-description="Application for you to calculate how much salary you gain, and How you can calculate your freelance rate"
+            project-url="https://kira.sulaimanmisri.com" />
+        </div>
+
+        <div id="devPath" class="col-md-4 mt-4">
+          <Card
+            project-title="Developer Path"
+            project-description="A guide for those who interest in Web Development but don't know where to start. This is based on my personal experience"
+            project-url="https://dev.sulaimanmisri.com" />
+        </div>
+
+        <div id="pru15" class="col-md-4 mt-4">
+          <Card
+            project-title="Pilihan Raya Umum 15"
+            project-description="A simple Website for you to find your choosen candidate based on Location selected"
+            project-url="https://pru15.sulaimanmisri.com" />
+        </div>
+
+        <div id="passwordGenerator" class="col-md-4 mt-4">
+          <Card
+            project-title="Password Generator"
+            project-description="A simple website that can generate a very secure password without saving it"
+            project-url="https://pass.sulaimanmisri.com" />
+        </div>
+
+        <div id="smPrefetch" class="col-md-4 mt-4">
+          <Card
+            project-title="SM Prefetch"
+            project-description="A WordPress plugin that can turns your website into a blazing
+                fast website using prefetch technology"
+            project-url="https://wordpress.org/plugins/sm-prefetch" />
+        </div>
+
+        <div id="smScrollbar" class="col-md-4 mt-4">
+          <Card
+            project-title="SM Scrollbar"
+            project-description="A WordPress plugin that can make your windows browser scrollbar look nice"
+            project-url="https://wordpress.org/plugins/sm-scrollbar" />
+        </div>
+
+        <div id="cariGambo" class="col-md-4 mt-4">
+          <Card
+            project-title="Cari Gambo"
+            project-description="A simple web application where you can search any Royalty-Free images"
+            project-url="https://gambo.sulaimanmisri.com" />
+        </div>
+
+        <div id="wordPressSandbox" class="col-md-4 mt-4">
+          <Card
+            project-title="WordPress Sandbox"
+            project-description="Try any WordPress latest version or debug your plugin here without need to install anything!"
+            project-url="https://wordpress.sulaimanmisri.com" />
+        </div>
+
+        <div id="belajarAlQuran" class="col-md-4 mt-4">
+          <Card
+            project-title="Belajar surah dalam Al-Quran"
+            project-description="A simple website that can help adult and children learn about surahs in Al-Quran"
+            project-url="https://belajar-alquran.sulaimanmisri.com" />
+        </div>
+
+        <div id="vueTracker" class="col-md-4 mt-4">
+          <Card
+            project-title="Expenses Tracker"
+            project-description="Track your expenses today! Failed to do that, you will 'bocor' yourself every month :("
+            project-url="https://vue-tracker-nu.vercel.app" />
+        </div>
+
+        <div id="vueBorder" class="col-md-4 mt-4">
+          <Card
+            project-title="Border Generator"
+            project-description="Create a border with ease using this simple application"
+            project-url="https://vue-border.vercel.app" />
+        </div>
+
+        <div id="digiVel" class="col-md-4 mt-4">
+          <Card
+            project-title="DigiVel"
+            project-description="Search your favorite Digimon data via API. Get the documentation in Sulaiman's github repo"
+            project-url="https://digivel.sulaimanmisri.com" />
+        </div>
+
+        <div id="comingSoon" class="col-md-4 mt-4">
+          <Card
+            project-title="Coming Soon"
+            project-description=" Sulaiman will create more project later for you to use. Check again later. Meanwhile, follow his github account please :)"
+            project-url="https://github.com/msulaimanmisri" />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
