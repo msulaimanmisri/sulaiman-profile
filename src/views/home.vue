@@ -8,7 +8,7 @@
       </h1>
 
       <p class="lead text-muted text-body">
-        With more than 7 years working experience, He's your next developer who
+        With more than 8 years working experience, He's your next developer who
         will translate your next big idea into reality.
       </p>
 
@@ -25,8 +25,7 @@
             transform: scale(1) translateZ(0);
             transform-origin: 17.43% 39%;
             filter: grayscale(71%);
-          "
-        />
+          " />
       </div>
     </div>
   </div>
