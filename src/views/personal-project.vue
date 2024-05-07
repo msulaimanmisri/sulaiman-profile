@@ -23,6 +23,13 @@ import Card from "../components/Card.vue";
             project-url="https://kelasdesign.com/?ref=evfiC9vL" />
         </div>
 
+        <div id="simpanKerja" class="col-md-4 mt-4">
+          <Card
+            project-title="Simpan Kerja"
+            project-description="SimpanKerja makes it easy for you to track and manage all job application records that you've ever applied to. Not Release to the public yet"
+            project-url="https://sk.sulaimanmisri.com" />
+        </div>
+
         <div id="kiraGaji" class="col-md-4 mt-4">
           <Card
             project-title="Kira Gaji"
