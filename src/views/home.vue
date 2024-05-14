@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import Image from "../components/Image.vue";
+</script>
 
 <template>
   <div class="container">
@@ -13,19 +15,19 @@
       </p>
 
       <div class="mt-5">
-        <img
-          src="/sulaiman-lead-dev.jpg"
-          class="img-fluid rounded-4 shadow"
-          loading="lazy"
-          alt="sulaiman-misri"
-          style="
-            width: 100%;
-            height: 50vh;
-            object-fit: cover;
-            transform: scale(1) translateZ(0);
-            transform-origin: 17.43% 39%;
-            filter: grayscale(71%);
-          " />
+        <div id="main">
+          <Image image-source="images/sulaiman-lead-dev.jpg" alt-name="sulaiman-coding-alone" />
+        </div>
+
+        <div id="secondary" class="row mt-4">
+          <div class="col-12 col-sm-8">
+            <Image image-source="images/lead-1.jpg" alt-name="sulaiman-with-the-team" />
+          </div>
+
+          <div class="col-12 col-sm-4 mt-4 mt-md-0">
+            <Image image-source="images/lead-2.jpg" alt-name="sulaiman-hear-the-explaination" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
