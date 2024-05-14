@@ -16,12 +16,16 @@ import Image from "../components/Image.vue";
 
       <div class="mt-5">
         <div id="main">
-          <Image image-source="images/sulaiman-lead-dev.jpg" alt-name="sulaiman-working" />
+          <Image image-source="images/sulaiman-lead-dev.jpg" alt-name="sulaiman-coding-alone" />
         </div>
 
-        <div id="secondary" class="row">
-          <div class="col-5">
-            <Image image-source="images/sulaiman-lead-dev.jpg" alt-name="sulaiman-working" />
+        <div id="secondary" class="row mt-4">
+          <div class="col-12 col-sm-8">
+            <Image image-source="images/lead-1.jpg" alt-name="sulaiman-with-the-team" />
+          </div>
+
+          <div class="col-12 col-sm-4 mt-4 mt-md-0">
+            <Image image-source="images/lead-2.jpg" alt-name="sulaiman-hear-the-explaination" />
           </div>
         </div>
       </div>
