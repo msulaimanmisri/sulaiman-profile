@@ -44,6 +44,13 @@ import Card from "../components/Card.vue";
             project-url="https://dev.sulaimanmisri.com" />
         </div>
 
+        <div id="phpAegis" class="col-md-4 mt-4">
+          <Card
+            project-title="Custom PHP Framework"
+            project-description="A simple PHP Framework that I build from scratch. I named it as Aegis. Under Development"
+            project-url="https://github.com/msulaimanmisri" />
+        </div>
+
         <div id="pru15" class="col-md-4 mt-4">
           <Card
             project-title="Pilihan Raya Umum 15"
