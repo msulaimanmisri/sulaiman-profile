@@ -47,7 +47,7 @@ import Card from "../components/Card.vue";
         <div id="phpAegis" class="col-md-4 mt-4">
           <Card
             project-title="Custom PHP Framework"
-            project-description="A simple PHP Framework that I build from scratch. I named it as Aegis. Under Development"
+            project-description="A simple PHP Framework that I build from scratch. I named it as PHPAegis. Still working on it. But it's not published yet. You can request to see if you are interested though"
             project-url="https://github.com/msulaimanmisri" />
         </div>
 
