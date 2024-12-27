@@ -53,7 +53,7 @@
     <div class="navbar navbar-expand-lg bg-success-subtle shadow-sm py-3">
       <div class="container">
         <span class="text-muted">
-              Not available for Freelance services. Focus on building <a href="https://bit.ly/daftar-kelas-design" target="_blank">Kelas Design</a>
+              Not available for Freelance services. Focus on building Next Startup 🔥🔥
             </span>
       </div>
     </div>
