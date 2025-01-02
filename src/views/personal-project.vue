@@ -16,6 +16,13 @@ import Card from "../components/Card.vue";
       </p>
 
       <div class="row">
+       <div id="easy-login" class="col-md-4 mt-4">
+          <Card
+            project-title="Easy Login"
+            project-description="Add a pre-defined Social Login button in your Laravel Application with ease!"
+            project-url="https://github.com/msulaimanmisri/easy-login" />
+        </div>
+
         <div id="kelasDesign" class="col-md-4 mt-4">
           <Card
             project-title="Kelas Design"
