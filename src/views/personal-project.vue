@@ -16,6 +16,27 @@ import Card from "../components/Card.vue";
       </p>
 
       <div class="row">
+        <div id="2500-fiqh" class="col-md-4 mt-4">
+          <Card
+            project-title="2500 Masalah Feqah"
+            project-description="A simple website to show the content of this book"
+            project-url="https://2500.sulaimanmisri.com" />
+        </div>
+        
+        <div id="easy-detect" class="col-md-4 mt-4">
+          <Card
+            project-title="Easy Detect"
+            project-description="Get exception report in your Laravel application before your user report it"
+            project-url="https://github.com/msulaimanmisri/easy-detect" />
+        </div>
+        
+        <div id="easy-deploy" class="col-md-4 mt-4">
+          <Card
+            project-title="Easy Deploy"
+            project-description="A simple Laravel package to simplify deployment commands. Only one line needed!"
+            project-url="https://github.com/msulaimanmisri/easy-deploy" />
+        </div>
+        
        <div id="easy-login" class="col-md-4 mt-4">
           <Card
             project-title="Easy Login"
