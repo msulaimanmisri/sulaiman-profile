@@ -53,7 +53,7 @@
     <div class="navbar navbar-expand-lg bg-success-subtle shadow-sm py-3">
       <div class="container">
         <span class="text-muted">
-              Not available for Freelance services. Focus on building the next Project 🔥🔥
+              Available for Freelance services. My expertise is building Web and Software through Agile Development. Let's Collab!
             </span>
       </div>
     </div>
