@@ -10,7 +10,7 @@ import Image from "../components/Image.vue";
       </h1>
 
       <p class="lead text-muted text-body">
-        With more than 8 years working experience, He's your next developer who
+        With more than 10 years of working experience, He's your next developer who
         will translate your next big idea into reality.
       </p>
 
