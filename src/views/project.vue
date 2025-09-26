@@ -74,8 +74,7 @@ import Project from "../components/Project.vue";
                 <Project title="Jurnal Bahasa DBP" />
                 <Project title="Jurnal Bahasa DBP" />
                 <Project title="Mitsubishi Motor Malaysia" />
-                <Project title="Proland by UEM Sunrise Berhad" />
-                <Project title="Profleet by UEM Sunrise Berhad" />
+                <Project title="UEM Sunrise Berhad Applications" />
               </ul>
             </div>
           </div>
