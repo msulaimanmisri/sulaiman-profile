@@ -8,44 +8,33 @@
       <hr />
 
       <p class="lead text-muted text-body">
-        Think Website, think Sulaiman. He's probably the best web developer for
-        your business.
+        Think website, think Sulaiman. He is regarded as one of the top web developers for business solutions.
       </p>
 
       <p class="lead text-muted text-body my-5">
-        Working as a Software Engineer at Kuala Lumpur, Sulaiman is a
-        Progress-Centric person where he always monitor his work progress
-        including his personal technical skills. Thanks to that, with that
-        attitude, he's always communicate with his stakeholder or clients
-        regarding the website or system that he build.
+        Based in Kuala Lumpur, Sulaiman works as a Senior Full-Stack Software Engineer. 
+        He is progress-oriented and continuously monitors both his project outcomes and his personal technical growth.
+        This proactive approach enables him to maintain clear communication with stakeholders and clients throughout every stage of a project.
       </p>
 
       <p class="lead text-muted text-body my-5">
-        His speciality is in Web Development area where his main tools is
-        WordPress, Laravel, Bootstrap CSS, jQuery and Vue Js.
+        Sulaiman specializes in web development, primarily using PHP, Laravel, Tailwind CSS, Alpine.js, and Vue.js.
         <span class="text-decoration-underline fw-bold"
-          >Like this website, he's build it using Vue Js and Bootstrap
-          CSS.</span
+          >This website is a testament to his skills, built using Vue.js and Bootstrap CSS.</span
         >
       </p>
 
       <p class="lead text-muted text-body my-5">
-        Having more than 8 years working experience, he has involved in many
-        projects including E-Commerce, Learning Management System, Mobile
-        Application, Interactive Website, Blog, API Integration, and many more.
+        With over 10 years of professional experience, he has contributed to a diverse range of projects, including e-commerce platforms, learning management systems, mobile applications, interactive websites, blogs, API integrations, and more.
       </p>
 
       <p class="lead text-muted text-body my-5">
-        Other than technical skills, he also currently act as a Lead Developer
-        where he is in charge on Developer resources and Server Architecture.
+        Beyond his technical expertise, Sulaiman also serves as a Software Architect for both current and upcoming company initiatives.
       </p>
 
       <p class="lead text-muted text-body my-5">
-        Outside working hour, he is teaching everyone who are interested in
-        learning WordPress and Web Development through application named
-        <a href="https://bit.ly/daftar-kelas-design" target="_blank"
-          >Kelas Design</a
-        >
+        Outside of working hours, he actively mentors individuals interested in WordPress and web development through both in-person and online channels.
+        He has additionally served as a speaker at programming events, including official WordPress gatherings in Malaysia and Ubuntu Malaysia.
       </p>
     </div>
   </div>
