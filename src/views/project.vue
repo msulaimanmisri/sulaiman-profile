@@ -44,6 +44,8 @@ import Project from "../components/Project.vue";
                 <Project title="Sankyo Machine Tool" />
                 <Project
                   title="Malaysian Computational Linguistics Olympiad (MyCLO)" />
+                <Project
+                  title="Juwai IQI" />
               </ul>
             </div>
           </div>
@@ -72,6 +74,8 @@ import Project from "../components/Project.vue";
                 <Project title="Jurnal Bahasa DBP" />
                 <Project title="Jurnal Bahasa DBP" />
                 <Project title="Mitsubishi Motor Malaysia" />
+                <Project title="Proland by UEM Sunrise Berhad" />
+                <Project title="Profleet by UEM Sunrise Berhad" />
               </ul>
             </div>
           </div>
