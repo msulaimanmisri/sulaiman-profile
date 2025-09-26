@@ -13,7 +13,7 @@ import Card from "../components/Card.vue";
 
       <p class="lead text-muted text-body">
         In his free time, he's building these projects. You can use it for free! (Some of them might not be working as expected due to several reasons)
-      </p
+      </p>
 
       <div class="row">
         <div id="2500-fiqh" class="col-md-4 mt-4">
