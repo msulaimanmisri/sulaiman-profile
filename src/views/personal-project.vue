@@ -6,14 +6,13 @@ import Card from "../components/Card.vue";
   <div class="container">
     <div class="py-5">
       <h1 class="fw-bolder text-muted display-3 text-main">
-        He just love to develop for himself and others.
+        He loves to develop for himself and others.
       </h1>
 
       <hr />
 
       <p class="lead text-muted text-body">
-        In his freetime, he's building these projects. You can use if for free!
-      </p>
+        In his free time, he's building these projects. You can use it for free! (Some of them might not be working as expected due to several reasons)
 
       <div class="row">
         <div id="2500-fiqh" class="col-md-4 mt-4">
