@@ -34,7 +34,7 @@
 
       <p class="lead text-muted text-body my-5">
         Outside of working hours, he actively mentors individuals interested in WordPress and web development through both in-person and online channels.
-        He has additionally served as a speaker at programming events, including official WordPress gatherings in Malaysia and Ubuntu Malaysia.
+        He has additionally served as a speaker at programming events, including official WordPress gatherings in Malaysia.
       </p>
     </div>
   </div>
