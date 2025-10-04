@@ -16,6 +16,13 @@ import Card from "../components/Card.vue";
       </p>
 
       <div class="row">
+         <div id="kirasekarang" class="col-md-4 mt-4">
+          <Card
+            project-title="KiraSekarang"
+            project-description="A must-have app to level up your Personal Finance Management"
+            project-url="https://kirasekarang.com" />
+        </div>
+        
         <div id="2500-fiqh" class="col-md-4 mt-4">
           <Card
             project-title="2500 Masalah Feqah"
