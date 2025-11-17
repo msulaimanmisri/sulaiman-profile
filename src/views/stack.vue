@@ -15,9 +15,9 @@
                 </p>
 
                 <div class="">
-                    <span class="badge bg-danger fs-3 m-1">TALL STACK</span>
-                    <span class="badge bg-success fs-3 m-1">VILT STACK</span>
-                    <span class="badge bg-success fs-3 m-1">LEMP STACK</span>
+                    <span class="badge bg-danger fs-3 m-1">TALL Stack</span>
+                    <span class="badge bg-success fs-3 m-1">VILT Stack</span>
+                    <span class="badge bg-success fs-3 m-1">LEMP Stack</span>
                     <span class="badge bg-primary fs-3 m-1">Docker</span>
                     <span class="badge bg-primary fs-3 m-1">Jira</span>
                 </div>
