@@ -16,10 +16,18 @@ import Card from "../components/Card.vue";
       </p>
 
       <div class="row">
+
+        <div id="bacasekejap" class="col-md-4 mt-4">
+          <Card
+            project-title="BacaSekejap"
+            project-description="A project that taught me how to build a scalable Web through Two-Tier Architecture and Different Load Balancing Strategy"
+            project-url="https://hantar.sulaimanmisri.com" />
+        </div>
+        
          <div id="kirasekarang" class="col-md-4 mt-4">
           <Card
             project-title="KiraSekarang"
-            project-description="A must-have app to level up your Personal Finance Management"
+            project-description="A must-have app to level up your Personal Finance Management. A project that taught me how to handle large transactions."
             project-url="https://kirasekarang.com" />
         </div>
         
