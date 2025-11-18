@@ -9,6 +9,7 @@
 
             <hr>
 
+            <!--
             <div class="primaryStack">
                 <p class="lead text-body text-muted">
                     This is his Primary Web Development stack.
@@ -66,6 +67,7 @@
                     <span class="badge border border-2 bg-light text-muted fs-3 m-1">Sendy</span>
                 </div>
             </div>
+        -->
         </div>
     </div>
 </template>
