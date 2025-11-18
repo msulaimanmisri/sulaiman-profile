@@ -4,7 +4,7 @@
     <div class="container">
         <div class="py-5">
             <h1 class="fw-bolder text-muted display-3 text-main">
-                Sulaiman's Development Stack
+                Sulaiman's Development Stack (updating...)
             </h1>
 
             <hr>
