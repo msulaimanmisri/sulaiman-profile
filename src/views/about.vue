@@ -72,7 +72,7 @@ const principles = [
         <div class="mt-8 border-t border-hairline pt-4 text-[14px] leading-relaxed" style="color: var(--color-footnote)">
           <p id="fn-aine">
             <sup class="footnote-ref"><a href="#fn-aine-ref">*</a></sup>
-            <strong>AI-Native Engineering (AINE)</strong> — AI-Native Engineering is how you build real software with AI agents in the loop at every step, while you (the human) stay in charge of the parts that matter: what to build, what the limits are, and whether the result is good. It is not vibe coding. It is not prompt engineering with a fresh name. It is a real workflow for engineers who already ship real systems and now want to ship them with an AI doing most of the typing.
+            <strong>AI-Native Engineering</strong> is how you build real software with AI agents in the loop at every step, while you (the human) stay in charge of the parts that matter: what to build, what the limits are, and whether the result is good. It is not vibe coding. It is not prompt engineering with a fresh name. It is a real workflow for engineers who already ship real systems and now want to ship them with an AI doing most of the typing.
             <a
               href="https://alfonsograziano.it/blog/what-is-ai-native-engineering"
               target="_blank"
