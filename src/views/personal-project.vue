@@ -1,210 +1,84 @@
 <script setup>
-import Card from "../components/Card.vue";
+import { computed, ref } from 'vue'
+import ArchiveGrid from '../components/ArchiveGrid.vue'
+import FilterChip from '../components/FilterChip.vue'
+import {
+  personalProjects,
+  personalProjectCategories,
+} from '../content/personal-projects.js'
+
+const activeCategory = ref('All')
+
+const filteredProjects = computed(() => {
+  if (activeCategory.value === 'All') return personalProjects
+  return personalProjects.filter((p) => p.category === activeCategory.value)
+})
+
+const counts = computed(() => {
+  const map = { All: personalProjects.length }
+  for (const p of personalProjects) {
+    map[p.category] = (map[p.category] || 0) + 1
+  }
+  return map
+})
 </script>
 
 <template>
-  <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-    <header class="max-w-4xl">
-      <h1 class="font-main text-4xl font-extrabold tracking-tight text-slate-800 sm:text-5xl">
-        He loves to develop for himself and others.
+  <div class="relative mx-auto w-full max-w-7xl px-5 pb-24 pt-40 md:px-8 md:pt-48 lg:pb-32 lg:pt-56">
+    <header class="max-w-5xl">
+      <p class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute motion-reveal">
+        <span class="mr-2">04</span>Personal projects
+      </p>
+      <h1
+        class="mt-6 font-sans text-5xl font-medium leading-[1.02] tracking-[-0.04em] text-text motion-reveal sm:text-6xl md:mt-8 md:text-7xl lg:text-[5.5rem]"
+      >
+        Things I built for the joy of building.
       </h1>
-
-      <hr class="mt-6 border-slate-200 sm:mt-8" />
-
-      <p class="mt-8 text-lg leading-8 text-slate-600 font-body sm:text-xl">
-        In his free time, he's building these projects. You can use them for free! (Some of them might not be working as expected due to several reasons)
+      <p class="mt-6 max-w-2xl font-sans text-base leading-relaxed text-text-soft motion-reveal md:mt-8 md:text-lg">
+        Tools, packages, and weekend experiments — most of them free to use. Each one taught me
+        something I now reach for daily.
       </p>
     </header>
 
-    <section class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-      <div id="bacasekejap">
-        <Card
-          project-title="BacaSekejap"
-          project-description="A project that taught me how to build a scalable Web through Two-Tier Architecture and Different Load Balancing Strategy"
-          project-url="https://hantar.sulaimanmisri.com" />
-      </div>
+    <div class="mt-12 flex flex-wrap items-center gap-2 md:mt-16">
+      <FilterChip
+        v-for="category in personalProjectCategories"
+        :key="category"
+        :label="category"
+        :active="activeCategory === category"
+        :count="counts[category] || 0"
+        @click="activeCategory = category"
+      />
+    </div>
 
-      <div id="kirasekarang">
-        <Card
-          project-title="KiraSekarang"
-          project-description="A must-have app to level up your Personal Finance Management. A project that taught me how to handle large transactions."
-          project-url="https://kirasekarang.com" />
-      </div>
-
-      <div id="2500-fiqh">
-        <Card
-          project-title="2500 Masalah Feqah"
-          project-description="A simple website to show the content of this book"
-          project-url="https://2500.sulaimanmisri.com" />
-      </div>
-
-      <div id="easy-detect">
-        <Card
-          project-title="Easy Detect"
-          project-description="Get exception report in your Laravel application before your user report it"
-          project-url="https://github.com/msulaimanmisri/easy-detect" />
-      </div>
-
-      <div id="easy-deploy">
-        <Card
-          project-title="Easy Deploy"
-          project-description="A simple Laravel package to simplify deployment commands. Only one line needed!"
-          project-url="https://github.com/msulaimanmisri/easy-deploy" />
-      </div>
-
-      <div id="easy-login">
-        <Card
-          project-title="Easy Login"
-          project-description="Add a pre-defined Social Login button in your Laravel Application with ease!"
-          project-url="https://github.com/msulaimanmisri/easy-login" />
-      </div>
-
-      <div id="kelasDesign">
-        <Card
-          project-title="Kelas Design"
-          project-description="Application for you to learn WordPress & Web Development"
-          project-url="https://kelasdesign.com/?ref=evfiC9vL" />
-      </div>
-
-      <div id="simpanKerja">
-        <Card
-          project-title="Simpan Kerja"
-          project-description="SimpanKerja makes it easy for you to track and manage all job application records that you've ever applied to. Not released to the public yet."
-          project-url="https://sk.sulaimanmisri.com" />
-      </div>
-
-      <div id="kiraGaji">
-        <Card
-          project-title="Kira Gaji"
-          project-description="Application for you to calculate how much salary you gain, and how you can calculate your freelance rate"
-          project-url="https://kira.sulaimanmisri.com" />
-      </div>
-
-      <div id="devPath">
-        <Card
-          project-title="Developer Path"
-          project-description="A guide for those who are interested in Web Development but don't know where to start. This is based on my personal experience"
-          project-url="https://dev.sulaimanmisri.com" />
-      </div>
-
-      <div id="phpAegis">
-        <Card
-          project-title="Custom PHP Framework"
-          project-description="A simple PHP Framework that I built from scratch. I named it PHPAegis. Still working on it. But it's not published yet. You can request to see if you are interested though."
-          project-url="https://github.com/msulaimanmisri" />
-      </div>
-
-      <div id="pru15">
-        <Card
-          project-title="Pilihan Raya Umum 15"
-          project-description="A simple website for you to find your chosen candidate based on location selected"
-          project-url="https://pru15.sulaimanmisri.com" />
-      </div>
-
-      <div id="passwordGenerator">
-        <Card
-          project-title="Password Generator"
-          project-description="A simple website that can generate a very secure password without saving it"
-          project-url="https://pass.sulaimanmisri.com" />
-      </div>
-
-      <div id="smPrefetch">
-        <Card
-          project-title="SM Prefetch"
-          project-description="A WordPress plugin that can turn your website into a blazing fast website using prefetch technology"
-          project-url="https://wordpress.org/plugins/sm-prefetch" />
-      </div>
-
-      <div id="smScrollbar">
-        <Card
-          project-title="SM Scrollbar"
-          project-description="A WordPress plugin that can make your windows browser scrollbar look nice"
-          project-url="https://wordpress.org/plugins/sm-scrollbar" />
-      </div>
-
-      <div id="cariGambo">
-        <Card
-          project-title="Cari Gambo"
-          project-description="A simple web application where you can search any Royalty-Free images"
-          project-url="https://gambo.sulaimanmisri.com" />
-      </div>
-
-      <div id="wordPressSandbox">
-        <Card
-          project-title="WordPress Sandbox"
-          project-description="Try any WordPress latest version or debug your plugin here without need to install anything!"
-          project-url="https://wordpress.sulaimanmisri.com" />
-      </div>
-
-      <div id="smRouteApi">
-        <Card
-          project-title="WordPress Route API"
-          project-description="If you want to fetch data from WordPress via API, you should use this plugin to make your life easier"
-          project-url="https://github.com/msulaimanmisri/sm-route-api" />
-      </div>
-
-      <div id="smMakePWA">
-        <Card
-          project-title="WordPress PWA"
-          project-description="Turns your WordPress site into Desktop or Mobile Apps in single click!"
-          project-url="https://github.com/msulaimanmisri/sm-make-pwa" />
-      </div>
-
-      <div id="redirectWooCommerce">
-        <Card
-          project-title="WooCommerce Redirect"
-          project-description="This simple plugin will allow WooCommerce users to redirect their customer into the Checkout page without need to load the Cart Page"
-          project-url="https://github.com/msulaimanmisri/wp-woo-redirect-checkout" />
-      </div>
-
-      <div id="smCustomAnalytics">
-        <Card
-          project-title="WordPress Custom Analytics"
-          project-description="This simple plugin will allow you to print out how many people has visited your website by using shortcode called [sm_tracking]"
-          project-url="https://github.com/msulaimanmisri/sm-custom-analytics" />
-      </div>
-
-      <div id="smErrorLog">
-        <Card
-          project-title="WordPress Debug"
-          project-description="This plugin will make your WP_DEBUG turn into `true` and you can check in the dashboard or your `wp-content` folder the error"
-          project-url="https://github.com/msulaimanmisri/SM-Error-Log" />
-      </div>
-
-      <div id="belajarAlQuran">
-        <Card
-          project-title="Belajar surah dalam Al-Quran"
-          project-description="A simple website that can help adults and children learn about surahs in Al-Quran"
-          project-url="https://belajar-alquran.sulaimanmisri.com" />
-      </div>
-
-      <div id="vueTracker">
-        <Card
-          project-title="Expenses Tracker"
-          project-description="Track your expenses today! Failed to do that, you will 'bocor' yourself every month :("
-          project-url="https://vue-tracker-nu.vercel.app" />
-      </div>
-
-      <div id="vueBorder">
-        <Card
-          project-title="Border Generator"
-          project-description="Create a border with ease using this simple application"
-          project-url="https://vue-border.vercel.app" />
-      </div>
-
-      <div id="digiVel">
-        <Card
-          project-title="DigiVel"
-          project-description="Search your favorite Digimon data via API. Get the documentation in Sulaiman's github repo"
-          project-url="https://digivel.sulaimanmisri.com" />
-      </div>
-
-      <div id="comingSoon">
-        <Card
-          project-title="Coming Soon"
-          project-description="Sulaiman will create more projects later for you to use. Check again later. Meanwhile, follow his github account please :)"
-          project-url="https://github.com/msulaimanmisri" />
-      </div>
+    <section class="mt-10 motion-reveal md:mt-12">
+      <ArchiveGrid :items="filteredProjects" />
     </section>
+
+    <div
+      v-if="filteredProjects.length === 0"
+      class="mt-16 rounded-[1.5rem] border border-hairline bg-surface px-8 py-16 text-center"
+    >
+      <p class="font-sans text-2xl font-medium text-text-soft">
+        Nothing in this category — yet.
+      </p>
+    </div>
+
+    <footer class="mt-16 flex flex-col items-start justify-between gap-3 border-t border-hairline pt-8 motion-reveal md:flex-row md:items-center md:gap-6">
+      <p class="font-sans text-xl font-medium text-text-soft">
+        More on the way — follow along on GitHub.
+      </p>
+      <a
+        href="https://github.com/msulaimanmisri"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-full border border-hairline-strong px-4 py-2 font-sans text-xs font-medium text-text transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-text active:scale-[0.98]"
+      >
+        @msulaimanmisri
+        <svg viewBox="0 0 16 16" fill="none" class="h-2.5 w-2.5" aria-hidden="true">
+          <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+    </footer>
   </div>
 </template>

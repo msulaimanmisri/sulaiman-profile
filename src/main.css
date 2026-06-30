@@ -1,17 +1,191 @@
 @import "tailwindcss";
 
+/* ──────────────────────────────────────────────────────────────────────────
+   Dark Monochrome · Design Tokens
+   Pure black background, off-white text, Geist Sans for everything.
+   Reference aesthetic: danielvaszka.com — minimal, editorial, grotesk-driven.
+   No display serif, no italic, no warm tones.
+   ────────────────────────────────────────────────────────────────────────── */
+
 @theme {
-  --font-main: "Cormorant Garamond", serif;
-  --font-body: "Inter", sans-serif;
+  /* Fonts — single family, multiple weights */
+  --font-display: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+
+  /* Monochrome palette — dark on dark */
+  --color-bg: #0A0A0A;
+  --color-surface: #131313;
+  --color-surface-soft: #181818;
+  --color-surface-deep: #050505;
+
+  --color-text: #FAFAFA;
+  --color-text-soft: #A8A8A8;
+  --color-text-mute: #6B6B6B;
+
+  --color-hairline: rgba(250, 250, 250, 0.08);
+  --color-hairline-strong: rgba(250, 250, 250, 0.16);
+
+  /* Custom radii */
+  --radius-bezel: 1.5rem;
+  --radius-bezel-sm: 0.875rem;
+
+  /* Subtle ambient shadows — barely visible on dark */
+  --shadow-inset-highlight: inset 0 1px 1px rgba(255, 255, 255, 0.04);
+  --shadow-ambient: 0 24px 60px -24px rgba(0, 0, 0, 0.5);
+  --shadow-ambient-soft: 0 12px 40px -20px rgba(0, 0, 0, 0.35);
 }
 
-/* Legacy utility aliases (preserved so existing component class names keep
-   reading correctly). Prefer the `font-main` / `font-body` Tailwind v4
-   utilities in new code. */
-.text-main {
-  font-family: var(--font-main);
+/* ──────────────────────────────────────────────────────────────────────────
+   Base layer
+   ────────────────────────────────────────────────────────────────────────── */
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-feature-settings: "ss01", "cv11", "calt";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* All headings use Geist — bold weight, tight tracking, no italic */
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 0.98;
+    color: var(--color-text);
+  }
+
+  /* Numeric mono caption styling */
+  .mono-caption {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+
+  /* Hairline default border utility */
+  .border-hairline {
+    border-color: var(--color-hairline);
+  }
+
+  /* Focus rings */
+  *:focus-visible {
+    outline: 1px solid var(--color-text);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+  }
 }
 
-.text-body {
-  font-family: var(--font-body);
+/* ──────────────────────────────────────────────────────────────────────────
+   Motion utilities — scroll-reveal choreography
+   GPU-safe (transform + opacity + filter only).
+   ────────────────────────────────────────────────────────────────────────── */
+
+@layer utilities {
+  .motion-reveal {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+    filter: blur(6px);
+    transition:
+      opacity 1000ms cubic-bezier(0.32, 0.72, 0, 1),
+      transform 1000ms cubic-bezier(0.32, 0.72, 0, 1),
+      filter 1000ms cubic-bezier(0.32, 0.72, 0, 1);
+    will-change: opacity, transform, filter;
+  }
+
+  .motion-reveal.is-revealed {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+    will-change: auto;
+  }
+
+  .motion-reveal-stagger > * {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+    filter: blur(6px);
+    transition:
+      opacity 900ms cubic-bezier(0.32, 0.72, 0, 1),
+      transform 900ms cubic-bezier(0.32, 0.72, 0, 1),
+      filter 900ms cubic-bezier(0.32, 0.72, 0, 1);
+    transition-delay: var(--stagger-delay, 0ms);
+  }
+
+  .motion-reveal-stagger.is-revealed > * {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+
+  /* Subtle pulse for "live" status dots — opacity only */
+  @keyframes live-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+  }
+
+  .animate-live {
+    animation: live-pulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Custom underline grow — for nav active state */
+  .nav-underline {
+    position: relative;
+  }
+  .nav-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 1px;
+    width: 100%;
+    background-color: currentColor;
+    border-radius: 9999px;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 500ms cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .nav-underline.is-active::after,
+  .nav-underline:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Reduced motion
+   ────────────────────────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .motion-reveal,
+  .motion-reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
 }

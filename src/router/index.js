@@ -5,9 +5,6 @@ const About = () => import('../views/about.vue')
 const Stack = () => import('../views/stack.vue')
 const Project = () => import('../views/project.vue')
 const PersonalProject = () => import('../views/personal-project.vue')
-const PostsIndex = () => import('../views/posts/index.vue')
-const PostsCreate = () => import('../views/posts/create.vue')
-const PostsEdit = () => import('../views/posts/edit.vue')
 
 const routes = [
     {
@@ -39,30 +36,14 @@ const routes = [
         name: 'personal-project.index',
         component: PersonalProject,
     },
-
-    {
-        path: '/posts',
-        name: 'posts.index',
-        component: PostsIndex,
-    },
-
-    {
-        path: '/posts/create',
-        name: 'posts.create',
-        component: PostsCreate,
-    },
-
-    {
-        path: '/posts/edit/:id',
-        name: 'posts.edit',
-        component: PostsEdit,
-    },
 ]
 
-//create router
 const router = createRouter({
     history: createWebHistory(),
-    routes // <-- routes,
+    routes,
+    scrollBehavior() {
+        return { top: 0 }
+    },
 })
 
 export default router

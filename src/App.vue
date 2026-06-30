@@ -1,110 +1,203 @@
 <script setup>
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
+import { ref, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { Dialog, DialogPanel } from '@headlessui/vue'
+import NavLink from './components/NavLink.vue'
+import FilmGrain from './components/FilmGrain.vue'
+import { useReveal } from './composables/useReveal.js'
+
+const route = useRoute()
+const router = useRouter()
+const isOpen = ref(false)
 
 const navLinks = [
-  { name: 'about.index', label: 'About.' },
-  { name: 'stack.index', label: 'Stack.' },
-  { name: 'project.index', label: 'Project.' },
-  { name: 'personal-project.index', label: 'Personal Project.' },
+  { name: 'about.index', label: 'About' },
+  { name: 'stack.index', label: 'Stack' },
+  { name: 'project.index', label: 'Work' },
+  { name: 'personal-project.index', label: 'Project' },
+  { href: 'https://dev.to/msulaimanmisri', label: 'Writing', external: true },
 ]
+
+// Scroll-reveal orchestrator
+useReveal()
+
+// Close mobile menu on route change
+watch(
+  () => route.fullPath,
+  () => {
+    isOpen.value = false
+  },
+)
+
+const prefetch = (name) => {
+  try {
+    router.resolve({ name })
+  } catch (_) {
+    /* noop */
+  }
+}
+
+const close = () => {
+  isOpen.value = false
+}
 </script>
 
 <template>
-  <Disclosure as="nav" class="bg-slate-900 text-slate-100 shadow-md">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex h-16 items-center justify-between">
-        <router-link
-          :to="{ name: 'home' }"
-          class="font-main text-2xl font-extrabold tracking-tight text-amber-400 hover:text-amber-300"
-        >
-          SulaimanMisri.
-        </router-link>
+  <!-- Floating "Fluid Island" nav -->
+  <header
+    class="pointer-events-none fixed inset-x-0 top-6 z-40 flex justify-center px-4 motion-reveal is-revealed"
+  >
+    <nav
+      class="pointer-events-auto flex w-max max-w-[calc(100vw-2rem)] items-center gap-4 rounded-full border border-hairline bg-bg/70 px-3 py-2 backdrop-blur-xl md:gap-6 md:px-5 md:py-2.5"
+      :class="{ 'border-hairline-strong': isOpen }"
+    >
+      <!-- Wordmark -->
+      <router-link
+        :to="{ name: 'home' }"
+        class="font-sans text-base font-semibold tracking-tight text-text transition-opacity duration-500 hover:opacity-70 md:text-lg"
+      >
+        Sulaiman Misri
+      </router-link>
 
-        <!-- Desktop nav -->
-        <ul class="hidden items-center gap-8 md:flex">
-          <li v-for="link in navLinks" :key="link.name" class="font-main text-lg">
+      <!-- Desktop nav links -->
+      <ul class="hidden items-center gap-7 md:flex">
+        <li
+          v-for="link in navLinks"
+          :key="link.href || link.name"
+          @mouseenter="link.name && prefetch(link.name)"
+        >
+          <a
+            v-if="link.external"
+            :href="link.href"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-underline font-sans text-sm font-medium tracking-tight text-text-soft transition-colors duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:text-text"
+          >
+            {{ link.label }}
+          </a>
+          <NavLink v-else :to="{ name: link.name }" :label="link.label" />
+        </li>
+      </ul>
+
+      <!-- Desktop CTAs -->
+      <div class="hidden items-center gap-2 md:flex">
+        <a
+          href="mailto:hello@sulaimanmisri.com"
+          class="group inline-flex items-center gap-2 rounded-full border border-hairline-strong bg-transparent px-4 py-2 font-sans text-xs font-medium text-text transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-text active:scale-[0.98]"
+        >
+          Get in touch
+          <span
+            class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-surface transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:-translate-y-px group-hover:scale-105"
+          >
+            <svg viewBox="0 0 16 16" fill="none" class="h-2.5 w-2.5" aria-hidden="true">
+              <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+
+      </div>
+
+      <!-- Mobile hamburger that morphs to X -->
+      <button
+        type="button"
+        class="relative inline-flex h-9 w-9 items-center justify-center rounded-full border border-hairline bg-transparent transition-colors duration-300 hover:border-hairline-strong md:hidden"
+        :aria-expanded="isOpen"
+        aria-label="Toggle navigation menu"
+        @click="isOpen = !isOpen"
+      >
+        <span
+          class="absolute h-px w-4 bg-text transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
+          :class="isOpen ? 'translate-y-0 rotate-45' : '-translate-y-[3px]'"
+        ></span>
+        <span
+          class="absolute h-px w-4 bg-text transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
+          :class="isOpen ? 'translate-y-0 -rotate-45' : 'translate-y-[3px]'"
+        ></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Fullscreen mobile modal -->
+  <Dialog :open="isOpen" @close="close" class="relative z-30 md:hidden">
+    <div
+      class="fixed inset-0 bg-bg/85 backdrop-blur-3xl"
+      aria-hidden="true"
+    ></div>
+
+    <div class="fixed inset-0 flex flex-col items-center justify-center px-6">
+      <DialogPanel class="flex w-full max-w-md flex-col items-center gap-2">
+        <ul class="flex w-full flex-col items-center gap-2">
+          <li
+            v-for="(link, i) in navLinks"
+            :key="link.href || link.name"
+            class="w-full text-center"
+            :style="{
+              transitionDelay: isOpen ? `${100 + i * 80}ms` : '0ms',
+              opacity: isOpen ? 1 : 0,
+              transform: isOpen ? 'translateY(0)' : 'translateY(24px)',
+              transition: 'opacity 700ms cubic-bezier(0.32,0.72,0,1), transform 700ms cubic-bezier(0.32,0.72,0,1)',
+            }"
+          >
+            <a
+              v-if="link.external"
+              :href="link.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block py-3 font-sans text-4xl font-medium tracking-tight text-text transition-opacity duration-300 hover:opacity-60"
+              @click="close"
+            >
+              {{ link.label }}
+            </a>
             <router-link
+              v-else
               :to="{ name: link.name }"
-              class="text-slate-200 transition hover:text-amber-400"
-              active-class="text-amber-400"
+              class="block py-3 font-sans text-4xl font-medium tracking-tight text-text transition-opacity duration-300 hover:opacity-60"
+              active-class="!opacity-100"
+              @click="close"
             >
               {{ link.label }}
             </router-link>
           </li>
         </ul>
 
-        <a
-          href="https://github.com/msulaimanmisri"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hidden rounded-md bg-amber-400 px-4 py-2 font-main text-sm font-bold text-slate-900 shadow-sm transition hover:bg-amber-300 md:inline-flex"
+        <div
+          class="mt-8 flex w-full flex-col gap-3"
+          :style="{
+            transitionDelay: isOpen ? `${100 + navLinks.length * 80}ms` : '0ms',
+            opacity: isOpen ? 1 : 0,
+            transform: isOpen ? 'translateY(0)' : 'translateY(24px)',
+            transition: 'opacity 700ms cubic-bezier(0.32,0.72,0,1), transform 700ms cubic-bezier(0.32,0.72,0,1)',
+          }"
         >
-          Follow him at Github
-        </a>
-
-        <!-- Mobile menu button -->
-        <DisclosureButton
-          class="inline-flex items-center justify-center rounded-md p-2 text-slate-200 hover:bg-slate-800 hover:text-amber-400 md:hidden"
-        >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.75"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-        </DisclosureButton>
-      </div>
-    </div>
-
-    <!-- Mobile panel -->
-    <DisclosurePanel class="border-t border-slate-800 md:hidden">
-      <ul class="space-y-1 px-4 pb-4 pt-3">
-        <li v-for="link in navLinks" :key="link.name">
-          <DisclosureButton
-            as="router-link"
-            :to="{ name: link.name }"
-            class="block rounded-md px-3 py-2 font-main text-lg text-slate-200 hover:bg-slate-800 hover:text-amber-400"
-            active-class="text-amber-400"
-          >
-            {{ link.label }}
-          </DisclosureButton>
-        </li>
-        <li class="pt-2">
           <a
-            href="https://github.com/msulaimanmisri"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block rounded-md bg-amber-400 px-3 py-2 text-center font-main text-sm font-bold text-slate-900 hover:bg-amber-300"
+            href="mailto:hello@sulaimanmisri.com"
+            class="block rounded-full border border-hairline-strong px-6 py-3 text-center font-sans text-sm font-medium text-text"
+            @click="close"
           >
-            Follow him at Github
+            Get in touch
           </a>
-        </li>
-      </ul>
-    </DisclosurePanel>
-  </Disclosure>
 
-  <!-- Freelance banner -->
-  <div class="border-b border-emerald-200 bg-emerald-50 py-3">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <p class="text-sm text-slate-700">
-        Available for Freelance services. My expertise is building Web and Software through Agile Development. Let's Collab!
-      </p>
+        </div>
+      </DialogPanel>
     </div>
-  </div>
+  </Dialog>
 
-  <main>
-    <router-view></router-view>
+  <main class="relative">
+    <router-view v-slot="{ Component, route: r }">
+      <transition
+        mode="out-in"
+        enter-active-class="transition-opacity duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
+        enter-from-class="opacity-0"
+        enter-to-class="opacity-100"
+        leave-active-class="transition-opacity duration-300 ease-[cubic-bezier(0.32,0.72,0,1)]"
+        leave-from-class="opacity-100"
+        leave-to-class="opacity-0"
+      >
+        <component :is="Component" :key="r.fullPath" />
+      </transition>
+    </router-view>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-slate-50 py-12">
-    <p class="text-center font-main text-base font-bold text-slate-500">
-      Crafted Carefully in Kuala Lumpur ❤
-    </p>
-  </footer>
+  <!-- Fixed film grain -->
+  <FilmGrain />
 </template>

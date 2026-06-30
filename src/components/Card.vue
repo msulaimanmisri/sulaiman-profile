@@ -3,33 +3,40 @@ defineProps({
   projectTitle: String,
   projectDescription: String,
   projectUrl: String,
-});
+})
 </script>
 
 <template>
-  <div class="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 transition hover:shadow-md">
-    <div class="flex flex-1 flex-col p-6">
-      <h4 class="text-lg font-semibold text-slate-800 font-body">
+  <article
+    class="group relative flex h-full flex-col rounded-2xl border border-hairline bg-surface p-6 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-[2px] hover:border-hairline-strong"
+  >
+    <div class="flex h-full flex-col gap-4">
+      <h4 class="font-sans text-lg font-medium leading-snug tracking-tight text-text md:text-[19px]">
         {{ projectTitle }}
       </h4>
 
-      <p class="mt-3 text-sm leading-6 text-slate-600 font-body">
+      <p class="font-sans text-sm leading-relaxed text-text-soft">
         {{ projectDescription }}
       </p>
-    </div>
 
-    <div class="border-t border-slate-200 bg-slate-50 px-6 py-4">
-      <a
-        :href="projectUrl"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-      >
-        Visit Site
-        <svg class="ml-1.5 h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-          <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 010-1.06l7.22-7.22H9.75a.75.75 0 010-1.5h4.5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0V6.97l-7.22 7.22a.75.75 0 01-1.06 0z" clip-rule="evenodd" />
-        </svg>
-      </a>
+      <div class="mt-auto flex items-center gap-2 border-t border-hairline pt-4">
+        <a
+          v-if="projectUrl"
+          :href="projectUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group/btn inline-flex items-center gap-2 rounded-full border border-hairline-strong px-4 py-2 font-sans text-xs font-medium text-text transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-text active:scale-[0.98]"
+        >
+          Visit site
+          <span
+            class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-surface-soft transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-px group-hover/btn:scale-105"
+          >
+            <svg viewBox="0 0 16 16" fill="none" class="h-2.5 w-2.5" aria-hidden="true">
+              <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </a>
+      </div>
     </div>
-  </div>
+  </article>
 </template>
