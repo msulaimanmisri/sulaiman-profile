@@ -232,17 +232,7 @@ applyTheme(userTheme.value)
 
   <main class="relative">
     <router-view v-slot="{ Component, route: r }">
-      <transition
-        mode="out-in"
-        enter-active-class="transition-opacity duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
-        enter-from-class="opacity-0"
-        enter-to-class="opacity-100"
-        leave-active-class="transition-opacity duration-300 ease-[cubic-bezier(0.32,0.72,0,1)]"
-        leave-from-class="opacity-100"
-        leave-to-class="opacity-0"
-      >
-        <component :is="Component" :key="r.fullPath" />
-      </transition>
+      <component :is="Component" :key="r.fullPath" />
     </router-view>
   </main>
 
