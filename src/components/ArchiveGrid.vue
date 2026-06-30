@@ -33,15 +33,19 @@ defineProps({
         </p>
 
         <div
-          v-if="item.url"
           class="mt-auto flex items-center gap-2 pt-2 opacity-0 transition-opacity duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:opacity-100"
         >
-          <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-text-mute">
-            Visit
+          <template v-if="item.url">
+            <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-text-mute">
+              Visit
+            </span>
+            <svg viewBox="0 0 16 16" fill="none" class="h-2.5 w-2.5 text-text-mute" aria-hidden="true">
+              <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </template>
+          <span v-else class="font-mono text-[10px] uppercase tracking-[0.2em] text-orange-400/50">
+            Coming soon
           </span>
-          <svg viewBox="0 0 16 16" fill="none" class="h-2.5 w-2.5 text-text-mute" aria-hidden="true">
-            <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
         </div>
       </div>
     </component>
