@@ -40,6 +40,27 @@ const prefetch = (name) => {
 const close = () => {
   isOpen.value = false
 }
+
+// ── Theme ──────────────────────────────────────────────────────────
+const userTheme = ref(localStorage.getItem('sulaiman:home-theme') || 'dark')
+
+function applyTheme(theme) {
+  if (theme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light')
+  } else {
+    document.documentElement.removeAttribute('data-theme')
+  }
+}
+
+function toggleTheme() {
+  const next = userTheme.value === 'dark' ? 'light' : 'dark'
+  userTheme.value = next
+  localStorage.setItem('sulaiman:home-theme', next)
+  applyTheme(next)
+}
+
+// Apply saved theme on load
+applyTheme(userTheme.value)
 </script>
 
 <template>
@@ -95,6 +116,21 @@ const close = () => {
           </span>
         </a>
 
+        <!-- Theme toggle -->
+        <button
+          type="button"
+          @click="toggleTheme"
+          class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-hairline bg-transparent transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-hairline-strong active:scale-[0.98] hover:cursor-pointer"
+          :aria-label="userTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+        >
+          <svg v-if="userTheme === 'dark'" viewBox="0 0 24 24" fill="none" class="h-4 w-4 text-text" aria-hidden="true">
+            <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg v-else viewBox="0 0 24 24" fill="none" class="h-4 w-4 text-text" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
       </div>
 
       <!-- Mobile hamburger that morphs to X -->
@@ -178,6 +214,21 @@ const close = () => {
             Get in touch
           </a>
 
+          <button
+            type="button"
+            @click="toggleTheme"
+            class="block rounded-full border border-hairline-strong px-6 py-3 text-center font-sans text-sm font-medium text-text"
+          >
+            <span class="inline-flex items-center justify-center gap-2">
+              <svg v-if="userTheme === 'dark'" viewBox="0 0 24 24" fill="none" class="h-4 w-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+              </svg>
+              <svg v-else viewBox="0 0 24 24" fill="none" class="h-4 w-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+              {{ userTheme === 'dark' ? 'Light mode' : 'Dark mode' }}
+            </span>
+          </button>
         </div>
       </DialogPanel>
     </div>

@@ -26,7 +26,7 @@ const counts = computed(() => {
     <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
       <div
         class="absolute inset-0"
-        style="background: radial-gradient(55% 55% at 50% 40%, rgba(250,250,250,0.04) 0%, transparent 100%)"
+        style="background: var(--hero-glow)"
       ></div>
       <div class="beam-bg absolute inset-0 opacity-[0.12] blur-[30px]"></div>
     </div>
