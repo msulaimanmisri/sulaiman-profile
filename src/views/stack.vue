@@ -106,21 +106,21 @@ const categories = [
     </div>
     <!-- Eyebrow + H1 -->
     <header class="max-w-5xl">
-      <p class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute motion-reveal">
+      <p class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute">
         <span class="mr-2">02</span>Stack
       </p>
       <h1
-        class="mt-6 font-sans text-5xl font-medium leading-[1.02] tracking-[-0.04em] text-text motion-reveal sm:text-6xl md:mt-8 md:text-7xl lg:text-[5.5rem]"
+        class="mt-6 font-sans text-5xl font-medium leading-[1.02] tracking-[-0.04em] text-text sm:text-6xl md:mt-8 md:text-7xl lg:text-[5.5rem]"
       >
         The tools I reach for.
       </h1>
-      <p class="mt-6 max-w-xl font-sans text-xl leading-snug text-text-soft motion-reveal md:mt-8 md:text-2xl">
+      <p class="mt-6 max-w-xl font-sans text-xl leading-snug text-text-soft md:mt-8 md:text-2xl">
         Boring where it matters, sharp where it counts.
       </p>
     </header>
 
     <!-- Tier legend -->
-    <div class="mt-12 flex flex-wrap items-center gap-6 motion-reveal md:mt-16">
+    <div class="mt-12 flex flex-wrap items-center gap-6 md:mt-16">
       <div class="flex items-center gap-2">
         <span class="inline-block h-1.5 w-1.5 rounded-full bg-text"></span>
         <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-text-soft">Daily</span>
@@ -137,7 +137,7 @@ const categories = [
 
     <!-- Bento · 12-col grid -->
     <section
-      class="mt-10 grid grid-cols-1 gap-3 md:mt-14 md:auto-rows-fr md:grid-cols-12 motion-reveal-stagger is-revealed"
+      class="mt-10 grid grid-cols-1 gap-3 md:mt-14 md:auto-rows-fr md:grid-cols-12"
     >
       <article
         v-for="(cat, i) in categories"
@@ -147,7 +147,6 @@ const categories = [
           cat.id === 'workspace' ? 'lg:col-span-8' : 'lg:col-span-4',
           { 'lg:row-span-2': cat.span.row === 2 },
         ]"
-        :style="{ '--stagger-delay': `${i * 80}ms` }"
       >
         <div
           class="group relative h-full rounded-[1.5rem] border border-hairline bg-surface p-7 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 hover:border-hairline-strong md:p-8"
@@ -178,7 +177,7 @@ const categories = [
     </section>
 
     <!-- Footer caption -->
-    <footer class="mt-16 flex flex-col items-start justify-between gap-3 border-t border-hairline pt-8 motion-reveal md:flex-row md:items-center md:gap-6">
+    <footer class="mt-16 flex flex-col items-start justify-between gap-3 border-t border-hairline pt-8 md:flex-row md:items-center md:gap-6">
       <p class="font-sans text-xl font-medium text-text-soft">
         I'll reach for anything that solves the problem.
       </p>

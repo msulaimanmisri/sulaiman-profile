@@ -53,10 +53,10 @@ const latestWriting = ref([
        <div class="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-8 lg:gap-12">
         <!-- Left: editorial statement -->
         <div class="md:col-span-7 md:pr-4 lg:col-span-7 lg:pr-8">
-          <EyebrowTag :label="now.location" class="motion-reveal" />
+          <EyebrowTag :label="now.location" />
 
           <h1
-            class="mt-6 font-sans text-[2.75rem] font-medium leading-[1.02] tracking-[-0.04em] text-text motion-reveal sm:text-5xl md:mt-8 md:text-6xl lg:text-[5.5rem]"
+            class="mt-6 font-sans text-[2.75rem] font-medium leading-[1.02] tracking-[-0.04em] text-text sm:text-5xl md:mt-8 md:text-6xl lg:text-[5.5rem]"
           >
             Your next
             Full Stack Engineer
@@ -64,14 +64,14 @@ const latestWriting = ref([
           </h1>
 
           <p
-            class="mt-8 max-w-xl font-sans text-lg leading-relaxed text-text-soft motion-reveal md:mt-10 md:text-xl"
+            class="mt-8 max-w-xl font-sans text-lg leading-relaxed text-text-soft md:mt-10 md:text-xl"
           >
             Ten years building production web platforms — from small shops to ministries and
             multinational brands. Equally comfortable writing the code, drawing the architecture,
             and explaining the trade-offs in plain language.
           </p>
 
-          <div class="mt-10 flex flex-wrap items-center gap-3 motion-reveal md:mt-12">
+          <div class="mt-10 flex flex-wrap items-center gap-3 md:mt-12">
             <a
               href="https://www.linkedin.com/in/msulaimanmisri/" target="_blank"
               class="group inline-flex items-center gap-3 rounded-full border border-hairline-strong bg-transparent px-6 py-3 font-sans text-sm font-medium text-text transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-text active:scale-[0.98]"
@@ -90,9 +90,9 @@ const latestWriting = ref([
         </div>
 
         <!-- Right: bento grid -->
-        <div class="grid grid-cols-1 gap-3 md:col-span-5 md:grid-cols-6 lg:col-span-5 motion-reveal-stagger is-revealed">
+        <div class="grid grid-cols-1 gap-3 md:col-span-5 md:grid-cols-6 lg:col-span-5">
           <!-- Now card -->
-          <div class="md:col-span-6 md:row-span-2" :style="{ '--stagger-delay': '0ms' }">
+          <div class="md:col-span-6 md:row-span-2">
             <StatCard
               index="01"
               variant="now"
@@ -102,7 +102,7 @@ const latestWriting = ref([
           </div>
 
           <!-- 10+ stat -->
-          <div class="md:col-span-3" :style="{ '--stagger-delay': '80ms' }">
+          <div class="md:col-span-3">
             <StatCard
               index="02"
               number="10+"
@@ -112,7 +112,7 @@ const latestWriting = ref([
           </div>
 
           <!-- 40+ stat -->
-          <div class="md:col-span-3" :style="{ '--stagger-delay': '160ms' }">
+          <div class="md:col-span-3">
             <StatCard
               index="03"
               number="40+"
@@ -122,7 +122,7 @@ const latestWriting = ref([
           </div>
 
           <!-- Reading -->
-          <div class="md:col-span-6" :style="{ '--stagger-delay': '240ms' }">
+          <div class="md:col-span-6">
             <StatCard
               index="04"
               variant="reading"
@@ -158,12 +158,11 @@ const latestWriting = ref([
         </router-link>
       </header>
 
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-3 motion-reveal-stagger is-revealed">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
         <article
           v-for="(project, i) in featuredProjects"
           :key="project.title"
           class="group relative rounded-[1.5rem] border border-hairline bg-surface p-6 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 hover:border-hairline-strong md:p-7"
-          :style="{ '--stagger-delay': `${i * 80}ms` }"
         >
           <div class="flex h-full flex-col gap-6">
             <header class="flex items-start justify-between gap-4">
@@ -226,12 +225,11 @@ const latestWriting = ref([
         </a>
       </header>
 
-      <ol class="overflow-hidden rounded-[1.25rem] border border-hairline bg-surface motion-reveal-stagger is-revealed">
+      <ol class="overflow-hidden rounded-[1.25rem] border border-hairline bg-surface">
         <li
           v-for="(post, i) in latestWriting"
           :key="post.url"
           class="border-b border-hairline last:border-b-0"
-          :style="{ '--stagger-delay': `${i * 60}ms` }"
         >
           <a
             :href="post.url"

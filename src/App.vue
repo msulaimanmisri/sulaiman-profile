@@ -4,7 +4,6 @@ import { useRoute, useRouter } from 'vue-router'
 import { Dialog, DialogPanel } from '@headlessui/vue'
 import NavLink from './components/NavLink.vue'
 import FilmGrain from './components/FilmGrain.vue'
-import { useReveal } from './composables/useReveal.js'
 
 const route = useRoute()
 const router = useRouter()
@@ -17,9 +16,6 @@ const navLinks = [
   { name: 'personal-project.index', label: 'Project' },
   { href: 'https://dev.to/msulaimanmisri', label: 'Writing', external: true },
 ]
-
-// Scroll-reveal orchestrator
-useReveal()
 
 // Close mobile menu on route change
 watch(
@@ -66,7 +62,7 @@ applyTheme(userTheme.value)
 <template>
   <!-- Floating "Fluid Island" nav -->
   <header
-    class="pointer-events-none fixed inset-x-0 top-6 z-40 flex justify-center px-4 motion-reveal is-revealed"
+    class="pointer-events-none fixed inset-x-0 top-6 z-40 flex justify-center px-4"
   >
     <nav
       class="pointer-events-auto flex w-max max-w-[calc(100vw-2rem)] items-center gap-4 rounded-full border border-hairline bg-bg/70 px-3 py-2 backdrop-blur-xl md:gap-6 md:px-5 md:py-2.5"

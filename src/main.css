@@ -140,47 +140,7 @@
   }
 }
 
-/* ──────────────────────────────────────────────────────────────────────────
-   Motion utilities — scroll-reveal choreography
-   GPU-safe (transform + opacity + filter only).
-   ────────────────────────────────────────────────────────────────────────── */
-
 @layer utilities {
-  .motion-reveal {
-    opacity: 0;
-    transform: translate3d(0, 20px, 0);
-    filter: blur(6px);
-    transition:
-      opacity 1000ms cubic-bezier(0.32, 0.72, 0, 1),
-      transform 1000ms cubic-bezier(0.32, 0.72, 0, 1),
-      filter 1000ms cubic-bezier(0.32, 0.72, 0, 1);
-    will-change: opacity, transform, filter;
-  }
-
-  .motion-reveal.is-revealed {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    filter: blur(0);
-    will-change: auto;
-  }
-
-  .motion-reveal-stagger > * {
-    opacity: 0;
-    transform: translate3d(0, 20px, 0);
-    filter: blur(6px);
-    transition:
-      opacity 900ms cubic-bezier(0.32, 0.72, 0, 1),
-      transform 900ms cubic-bezier(0.32, 0.72, 0, 1),
-      filter 900ms cubic-bezier(0.32, 0.72, 0, 1);
-    transition-delay: var(--stagger-delay, 0ms);
-  }
-
-  .motion-reveal-stagger.is-revealed > * {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    filter: blur(0);
-  }
-
   /* Nightwatch-style animated beam background.
      Tints come from --beam-strong / --beam-soft (defined in @layer base)
      so they adapt to the active theme. */
@@ -263,10 +223,4 @@
     scroll-behavior: auto !important;
   }
 
-  .motion-reveal,
-  .motion-reveal-stagger > * {
-    opacity: 1 !important;
-    transform: none !important;
-    filter: none !important;
-  }
 }
