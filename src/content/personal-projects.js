@@ -3,7 +3,7 @@ export const personalProjects = [
     title: "KunciMasuk Desktop App",
     description:
       "Save and manage SSH server configurations and connect with one click. Support AWS EC2 Instance Connect Endpoint (EICE) tunnels.",
-    url: "https://drive.google.com/drive/folders/1prVXCCFy_Nq4mX_tNJWMholRw2pjtOmY",
+    url: "",
     category: "Tooling",
     featured: true,
   },
@@ -35,7 +35,7 @@ export const personalProjects = [
     title: "10k Request Architecture",
     description:
       "Strategic plan to handle 10k requests per second with Laravel Application. This architecture combine multiple services to achieve the goal.",
-    url: "https://drive.google.com/drive/folders/1prVXCCFy_Nq4mX_tNJWMholRw2pjtOmY?usp=drive_link",
+    url: "https://drive.google.com/drive/folders/1tutkHgIinmWkTxO9-vG-rGfTRgtN9jMB?usp=sharing",
     category: "Architecture",
   },
   {
