@@ -1,7 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --font-main: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* Legacy utility aliases (preserved so existing component class names keep
+   reading correctly). Prefer the `font-main` / `font-body` Tailwind v4
+   utilities in new code. */
 .text-main {
-    font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-main);
 }
 
 .text-body {
-    font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
 }

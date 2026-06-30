@@ -19,15 +19,14 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="container mt-5 mb-5">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card border-0 py-5 rounded-3 shadow-sm">
-                    <div class="card-body text-center text-muted">
-                        Blog post Index
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+    <div class="rounded-2xl bg-white p-12 text-center shadow-sm ring-1 ring-slate-200 sm:p-16">
+      <h1 class="font-main text-3xl font-extrabold tracking-tight text-slate-800 sm:text-4xl">
+        Blog post Index
+      </h1>
+      <p class="mt-3 text-sm text-slate-500 font-body">
+        {{ posts.length }} post(s) loaded
+      </p>
     </div>
+  </div>
 </template>
