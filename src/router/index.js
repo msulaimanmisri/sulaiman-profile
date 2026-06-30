@@ -1,59 +1,49 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+const Home = () => import('../views/home.vue')
+const About = () => import('../views/about.vue')
+const Stack = () => import('../views/stack.vue')
+const Project = () => import('../views/project.vue')
+const PersonalProject = () => import('../views/personal-project.vue')
+
 const routes = [
     {
         path: '/',
         name: 'home',
-        component: () => import( /* webpackChunkName: "home" */ '../views/home.vue')
+        component: Home,
     },
 
     {
         path: '/about',
         name: 'about.index',
-        component: () => import( /* webpackChunkName: "home" */ '../views/about.vue')
+        component: About,
     },
 
     {
         path: '/stack',
         name: 'stack.index',
-        component: () => import( /* webpackChunkName: "home" */ '../views/stack.vue')
+        component: Stack,
     },
 
     {
         path: '/project',
         name: 'project.index',
-        component: () => import( /* webpackChunkName: "home" */ '../views/project.vue')
+        component: Project,
     },
 
     {
         path: '/personal-project',
         name: 'personal-project.index',
-        component: () => import( /* webpackChunkName: "home" */ '../views/personal-project.vue')
+        component: PersonalProject,
     },
-
-    {
-        path: '/posts',
-        name: 'posts.index',
-        component: () => import( /* webpackChunkName: "index" */ '../views/posts/index.vue')
-    },
-
-    {
-        path: '/posts/create',
-        name: 'posts.create',
-        component: () => import( /* webpackChunkName: "create" */ '../views/posts/create.vue')
-    },
-
-    {
-        path: '/posts/edit/:id',
-        name: 'posts.edit',
-        component: () => import( /* webpackChunkName: "edit" */ '../views/posts/edit.vue')
-    }
 ]
 
-//create router
 const router = createRouter({
     history: createWebHistory(),
-    routes // <-- routes,
+    routes,
+    scrollBehavior() {
+        return { top: 0 }
+    },
 })
 
 export default router

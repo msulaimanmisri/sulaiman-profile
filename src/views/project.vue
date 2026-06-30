@@ -1,85 +1,72 @@
 <script setup>
-import Project from "../components/Project.vue";
+import { computed, ref } from 'vue'
+import ArchiveGrid from '../components/ArchiveGrid.vue'
+import FilterChip from '../components/FilterChip.vue'
+import { clients, clientSectors } from '../content/clients.js'
+
+const activeSector = ref('All')
+
+const filteredClients = computed(() => {
+  if (activeSector.value === 'All') return clients
+  return clients.filter((c) => c.sector === activeSector.value)
+})
+
+const counts = computed(() => {
+  const map = { All: clients.length }
+  for (const c of clients) {
+    map[c.sector] = (map[c.sector] || 0) + 1
+  }
+  return map
+})
 </script>
 
 <template>
-  <div class="container">
-    <div class="py-5">
-      <h1 class="fw-bolder text-muted display-3 text-main">
-        Project that he's involved.
-      </h1>
-
-      <hr />
-
-      <p class="lead text-muted text-body">
-        From small organization to Big Organization. Sulaiman has collaborate
-        with them to make thier businesses or work easy. Here's the lists.
+  <div class="relative mx-auto w-full max-w-7xl px-5 pb-24 pt-40 md:px-8 md:pt-48 lg:pb-32 lg:pt-56">
+    <!-- Hero background -->
+    <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+      <div
+        class="absolute inset-0"
+        style="background: var(--hero-glow)"
+      ></div>
+      <div class="beam-bg absolute inset-0 opacity-[0.12] blur-[30px]"></div>
+    </div>
+    <header class="max-w-5xl">
+      <p class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute motion-reveal">
+        <span class="mr-2">03</span>Work
       </p>
+      <h1
+        class="mt-6 font-sans text-5xl font-medium leading-[1.02] tracking-[-0.04em] text-text motion-reveal sm:text-6xl md:mt-8 md:text-7xl lg:text-[5.5rem]"
+      >
+        Engagements, end to end.
+      </h1>
+      <p class="mt-6 max-w-2xl font-sans text-base leading-relaxed text-text-soft motion-reveal md:mt-8 md:text-lg">
+        From small shops to ministries and multinational brands — selected engagements from the
+        last decade. Filter by sector.
+      </p>
+    </header>
 
-      <div class="">
-        <div class="row">
-          <div class="col-md-6 firstRow">
-            <div
-              class="card border-0 card-body rounded-3 shadow-sm mt-3 text-body fs-5 h-100">
-              <ul class="mb-0">
-                <Project title="Kementerian Pendidikan Malaysia" />
-                <Project title="Kyoto Kimono Yuzen" />
-                <Project title="ASEAN Schools Games 2018" />
-                <Project title="Perbadanan Harta Intelek (MyIPO)" />
-                <Project title="Universiti Malaysia Sarawak (UNIMAS)" />
-                <Project title="Ardent Educational Sdn Bhd" />
-                <Project title="Kangaroo Math" />
-                <Project title="Beaver Computational Thinking" />
-                <Project title="Kancil Science Malaysia" />
-                <Project title="Kijang Economics Malaysia" />
-                <Project title="Malaysian Earth Science Olympiad (MyESO)" />
-                <Project title="KlikWeb" />
-                <Project title="Dragtify" />
-                <Project title="Ahlan Academy" />
-                <Project title="Plus PM" />
-                <Project title="RenoRumah" />
-                <Project
-                  title="The Japanese Chamber Of Trade & Industry, Malaysia" />
-                <Project title="Dr Strech Singapore" />
-                <Project title="Sankyo Machine Tool" />
-                <Project
-                  title="Malaysian Computational Linguistics Olympiad (MyCLO)" />
-                <Project
-                  title="Juwai IQI" />
-              </ul>
-            </div>
-          </div>
+    <div class="mt-12 flex flex-wrap items-center gap-2 md:mt-16">
+      <FilterChip
+        v-for="sector in clientSectors"
+        :key="sector"
+        :label="sector"
+        :active="activeSector === sector"
+        :count="counts[sector] || 0"
+        @click="activeSector = sector"
+      />
+    </div>
 
-          <div class="col-md-6 secondRow">
-            <div
-              class="card border-0 card-body rounded-3 shadow-sm mt-3 text-body fs-5 h-100">
-              <ul class="mb-0">
-                <Project title="Malaysia Astronomy Olympiad (MyAO)" />
-                <Project title="Malaysian Economics Olympiad (MyEO)" />
-                <Project title="IbuAna Bookstore" />
-                <Project title="AsiaQuest Malaysia" />
-                <Project title="Pro Academy" />
-                <Project title="Kiah.Store" />
-                <Project title="Contest Hub" />
-                <Project title="Young Coder Malaysia" />
-                <Project title="Kelas Design" />
-                <Project title="Bina Minda Commerce" />
-                <Project title="Bina Funnel" />
-                <Project title="Dewan Masyarakat DBP" />
-                <Project title="Dewan Sastera DBP" />
-                <Project title="Dewan Ekonomi DBP" />
-                <Project title="Dewan Bahasa DBP" />
-                <Project title="Akademi DBP" />
-                <Project title="Malay Literature DBP" />
-                <Project title="Jurnal Bahasa DBP" />
-                <Project title="Jurnal Bahasa DBP" />
-                <Project title="Mitsubishi Motor Malaysia" />
-                <Project title="UEM Sunrise Berhad Applications" />
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section class="mt-10 motion-reveal md:mt-12">
+      <ArchiveGrid :items="filteredClients" />
+    </section>
+
+    <div
+      v-if="filteredClients.length === 0"
+      class="mt-16 rounded-[1.5rem] border border-hairline bg-surface px-8 py-16 text-center"
+    >
+      <p class="font-sans text-2xl font-medium text-text-soft">
+        Nothing in this sector — yet.
+      </p>
     </div>
   </div>
 </template>

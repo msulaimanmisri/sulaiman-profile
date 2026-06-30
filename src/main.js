@@ -1,11 +1,12 @@
 import { createApp } from 'vue'
-// import './style.css'
 import App from './App.vue'
-import './main.css';
-
+import './main.css'
 
 import router from './router'
-const app = createApp(App);
-app.use(router);
+import { magnetic } from './directives/magnetic.js'
+
+const app = createApp(App)
+app.use(router)
+app.directive('magnetic', magnetic)
 
 app.mount('#app')
