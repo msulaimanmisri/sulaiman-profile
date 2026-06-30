@@ -26,11 +26,11 @@ const principles = [
     </div>
     <!-- Eyebrow + H1 -->
     <header class="max-w-5xl">
-      <p class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute motion-reveal">
+      <p class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute">
         <span class="mr-2">01</span>About
       </p>
       <h1
-        class="mt-6 font-sans text-5xl font-medium leading-[1.02] tracking-[-0.04em] text-text motion-reveal sm:text-6xl md:mt-8 md:text-7xl lg:text-[5.5rem]"
+        class="mt-6 font-sans text-5xl font-medium leading-[1.02] tracking-[-0.04em] text-text sm:text-6xl md:mt-8 md:text-7xl lg:text-[5.5rem]"
       >
         Ten years of building software that ships —
         <span class="text-text-soft">and software that lasts.</span>
@@ -39,7 +39,7 @@ const principles = [
 
     <!-- Editorial split: bio prose left, focus areas right -->
     <div class="mt-16 grid grid-cols-1 gap-12 md:mt-20 md:grid-cols-12 md:gap-8 lg:gap-16">
-      <div class="md:col-span-7 motion-reveal">
+      <div class="md:col-span-7">
         <div class="space-y-5 font-sans text-base leading-relaxed text-text-soft md:text-lg md:leading-[1.75]">
           <p>
             Sulaiman is a Senior Software Engineer and Software Architect based in Kuala Lumpur.
@@ -83,7 +83,7 @@ const principles = [
         </div>
       </div>
 
-      <aside class="md:col-span-5 md:pl-4 motion-reveal">
+      <aside class="md:col-span-5 md:pl-4">
         <div class="sticky top-32">
           <p class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute">
             Focus areas
@@ -107,7 +107,7 @@ const principles = [
     </div>
 
     <!-- Image gallery -->
-    <section class="mt-20 md:mt-28 motion-reveal">
+    <section class="mt-20 md:mt-28">
       <div class="flex gap-3 overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden sm:grid sm:grid-cols-2 md:grid-cols-4 sm:gap-3 md:gap-4">
         <div class="shrink-0 w-[80vw] snap-center sm:w-auto sm:snap-none overflow-hidden rounded-[1.5rem] bg-surface">
           <img
@@ -141,9 +141,9 @@ const principles = [
     </section>
 
     <!-- Asymmetrical Bento -->
-    <section class="mt-20 grid grid-cols-1 gap-3 md:mt-28 md:grid-cols-12 motion-reveal-stagger is-revealed">
+    <section class="mt-20 grid grid-cols-1 gap-3 md:mt-28 md:grid-cols-12">
       <!-- A · What I do (wide) -->
-      <article class="md:col-span-8 md:row-span-2" :style="{ '--stagger-delay': '0ms' }">
+      <article class="md:col-span-8 md:row-span-2">
         <div class="group relative h-full rounded-[1.5rem] border border-hairline bg-surface p-7 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-hairline-strong md:p-9">
           <div class="flex h-full flex-col gap-6">
             <header class="flex items-center justify-between">
@@ -165,7 +165,7 @@ const principles = [
       </article>
 
       <!-- B · Where -->
-      <article class="md:col-span-4" :style="{ '--stagger-delay': '80ms' }">
+      <article class="md:col-span-4">
         <div class="group relative h-full rounded-[1.5rem] border border-hairline bg-surface p-7 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-hairline-strong">
           <div class="flex h-full flex-col gap-4">
             <span class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute">
@@ -182,7 +182,7 @@ const principles = [
       </article>
 
       <!-- C · Languages -->
-      <article class="md:col-span-4" :style="{ '--stagger-delay': '160ms' }">
+      <article class="md:col-span-4">
         <div class="group relative h-full rounded-[1.5rem] border border-hairline bg-surface p-7 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-hairline-strong">
           <div class="flex h-full flex-col gap-3">
             <span class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute">
@@ -199,7 +199,7 @@ const principles = [
       </article>
 
       <!-- D · Philosophy (tall) -->
-      <article class="md:col-span-4 md:row-span-2" :style="{ '--stagger-delay': '240ms' }">
+      <article class="md:col-span-4 md:row-span-2">
         <div class="group relative h-full rounded-[1.5rem] border border-hairline bg-surface p-7 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-hairline-strong md:p-8">
           <div class="flex h-full flex-col gap-6">
             <span class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute">
@@ -214,7 +214,7 @@ const principles = [
       </article>
 
       <!-- E · Speaking -->
-      <article class="md:col-span-4 md:row-span-2" :style="{ '--stagger-delay': '320ms' }">
+      <article class="md:col-span-4 md:row-span-2">
         <div class="group relative h-full rounded-[1.5rem] border border-hairline bg-surface p-7 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-hairline-strong">
           <div class="flex h-full flex-col gap-3">
             <span class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute">
@@ -234,7 +234,7 @@ const principles = [
       </article>
 
       <!-- F · Mentoring -->
-      <article class="md:col-span-4 md:row-span-2" :style="{ '--stagger-delay': '400ms' }">
+      <article class="md:col-span-4 md:row-span-2">
         <div class="group relative h-full rounded-[1.5rem] border border-hairline bg-surface p-7 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-hairline-strong">
           <div class="flex h-full flex-col gap-3">
             <span class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute">

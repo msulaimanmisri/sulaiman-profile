@@ -31,15 +31,15 @@ const counts = computed(() => {
       <div class="beam-bg absolute inset-0 opacity-[0.12] blur-[30px]"></div>
     </div>
     <header class="max-w-5xl">
-      <p class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute motion-reveal">
+      <p class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute">
         <span class="mr-2">03</span>Work
       </p>
       <h1
-        class="mt-6 font-sans text-5xl font-medium leading-[1.02] tracking-[-0.04em] text-text motion-reveal sm:text-6xl md:mt-8 md:text-7xl lg:text-[5.5rem]"
+        class="mt-6 font-sans text-5xl font-medium leading-[1.02] tracking-[-0.04em] text-text sm:text-6xl md:mt-8 md:text-7xl lg:text-[5.5rem]"
       >
         Engagements, end to end.
       </h1>
-      <p class="mt-6 max-w-2xl font-sans text-base leading-relaxed text-text-soft motion-reveal md:mt-8 md:text-lg">
+      <p class="mt-6 max-w-2xl font-sans text-base leading-relaxed text-text-soft md:mt-8 md:text-lg">
         From small shops to ministries and multinational brands — selected engagements from the
         last decade. Filter by sector.
       </p>
@@ -56,7 +56,7 @@ const counts = computed(() => {
       />
     </div>
 
-    <section class="mt-10 motion-reveal md:mt-12">
+    <section class="mt-10 md:mt-12">
       <ArchiveGrid :items="filteredClients" />
     </section>
 
