@@ -95,6 +95,14 @@ const categories = [
 
 <template>
   <div class="relative mx-auto w-full max-w-7xl px-5 pb-24 pt-40 md:px-8 md:pt-48 lg:pb-32 lg:pt-56">
+    <!-- Hero background -->
+    <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+      <div
+        class="absolute inset-0"
+        style="background: radial-gradient(55% 55% at 50% 40%, rgba(250,250,250,0.04) 0%, transparent 100%)"
+      ></div>
+      <div class="beam-bg absolute inset-0 opacity-[0.12] blur-[30px]"></div>
+    </div>
     <!-- Eyebrow + H1 -->
     <header class="max-w-5xl">
       <p class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute motion-reveal">
@@ -173,8 +181,8 @@ const categories = [
       <p class="font-sans text-xl font-medium text-text-soft">
         I'll reach for anything that solves the problem.
       </p>
-      <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-text-mute">
-        Last updated · 2026-06
+      <p class="font-sans text-base text-orange-400/50">
+        Not limited to this list — happy to pick up new languages, tools, or frameworks as the role requires.
       </p>
     </footer>
   </div>

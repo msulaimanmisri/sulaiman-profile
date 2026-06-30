@@ -72,7 +72,7 @@ const latestWriting = ref([
 
           <div class="mt-10 flex flex-wrap items-center gap-3 motion-reveal md:mt-12">
             <a
-              href="mailto:hello@sulaimanmisri.com"
+              href="https://www.linkedin.com/in/msulaimanmisri/" target="_blank"
               class="group inline-flex items-center gap-3 rounded-full border border-hairline-strong bg-transparent px-6 py-3 font-sans text-sm font-medium text-text transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-text active:scale-[0.98]"
             >
               Get in touch
@@ -96,7 +96,7 @@ const latestWriting = ref([
               index="01"
               variant="now"
               :label="now.focus"
-              :caption="now.lastCommit"
+              :caption="now.projectNiche"
             />
           </div>
 
@@ -126,7 +126,7 @@ const latestWriting = ref([
               index="04"
               variant="reading"
               :label="now.reading.join(' | ')"
-              caption="Currently reading"
+              caption="Last reading"
             />
           </div>
         </div>
@@ -276,7 +276,7 @@ const latestWriting = ref([
 
         <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
           <a
-            href="mailto:hello@sulaimanmisri.com"
+            href="https://www.linkedin.com/in/msulaimanmisri/" target="_blank"
             class="group inline-flex items-center gap-3 rounded-full border border-hairline-strong bg-transparent px-6 py-3 font-sans text-sm font-medium text-text transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-text active:scale-[0.98]"
           >
             Get in touch
@@ -295,40 +295,3 @@ const latestWriting = ref([
   </div>
 </template>
 
-<style scoped>
-.beam-bg {
-  background-image:
-    repeating-linear-gradient(
-      100deg,
-      transparent 0%,
-      transparent 3%,
-      rgba(250, 250, 250, 0.06) 5%,
-      rgba(250, 250, 250, 0.06) 7%,
-      transparent 10%,
-      transparent 12%,
-      rgba(250, 250, 250, 0.06) 14%,
-      transparent 16%
-    ),
-    repeating-linear-gradient(
-      100deg,
-      rgba(168, 168, 168, 0.03) 0%,
-      rgba(168, 168, 168, 0.03) 1.5%,
-      rgba(168, 168, 168, 0.06) 2%,
-      rgba(107, 107, 107, 0.03) 3%,
-      rgba(107, 107, 107, 0.03) 4%,
-      rgba(168, 168, 168, 0.06) 4.5%,
-      rgba(168, 168, 168, 0.03) 5%
-    );
-  background-size: 300%, 200%;
-  animation: animate-beams 60s linear infinite;
-}
-
-@keyframes animate-beams {
-  0% {
-    background-position: 50% 50%, 50% 50%;
-  }
-  100% {
-    background-position: 350% 50%, 350% 50%;
-  }
-}
-</style>

@@ -135,6 +135,39 @@
     filter: blur(0);
   }
 
+  /* Nightwatch-style animated beam background */
+  .beam-bg {
+    background-image:
+      repeating-linear-gradient(
+        100deg,
+        transparent 0%,
+        transparent 3%,
+        rgba(250, 250, 250, 0.06) 5%,
+        rgba(250, 250, 250, 0.06) 7%,
+        transparent 10%,
+        transparent 12%,
+        rgba(250, 250, 250, 0.06) 14%,
+        transparent 16%
+      ),
+      repeating-linear-gradient(
+        100deg,
+        rgba(168, 168, 168, 0.03) 0%,
+        rgba(168, 168, 168, 0.03) 1.5%,
+        rgba(168, 168, 168, 0.06) 2%,
+        rgba(107, 107, 107, 0.03) 3%,
+        rgba(107, 107, 107, 0.03) 4%,
+        rgba(168, 168, 168, 0.06) 4.5%,
+        rgba(168, 168, 168, 0.03) 5%
+      );
+    background-size: 300%, 200%;
+    animation: animate-beams 60s linear infinite;
+  }
+
+  @keyframes animate-beams {
+    0% { background-position: 50% 50%, 50% 50%; }
+    100% { background-position: 350% 50%, 350% 50%; }
+  }
+
   /* Subtle pulse for "live" status dots — opacity only */
   @keyframes live-pulse {
     0%, 100% { opacity: 1; }

@@ -1,192 +1,228 @@
-/**
- * 25 personal projects (plus one "Coming Soon" entry = 26) migrated from the previous site.
- * Category classification: Laravel, Vue, WordPress, Tooling.
- *
- * The first three (BacaSekejap, KiraSekarang, WordPress Sandbox) are surfaced as
- * the "Selected Work" cards on the home page.
- */
 export const personalProjects = [
   {
-    title: 'BacaSekejap',
+    title: "KunciMasuk Desktop App",
     description:
-      'A project that taught me how to build a scalable Web through Two-Tier Architecture and Different Load Balancing Strategy.',
-    url: 'https://hantar.sulaimanmisri.com',
-    category: 'Laravel',
+      "Save and manage SSH server configurations and connect with one click. Support AWS EC2 Instance Connect Endpoint (EICE) tunnels.",
+    url: "https://drive.google.com/drive/folders/1prVXCCFy_Nq4mX_tNJWMholRw2pjtOmY",
+    category: "Tooling",
     featured: true,
   },
   {
-    title: 'KiraSekarang',
+    title: "Easy Switch Server",
     description:
-      'A must-have app to level up your Personal Finance Management. A project that taught me how to handle large transactions.',
-    url: 'https://kirasekarang.com',
-    category: 'Laravel',
+      "Script that will make your life easier when you have multiple servers to manage. It will switch the server and run the command you want.",
+    url: "https://github.com/msulaimanmisri/easy-switch-server",
+    category: "Tooling",
     featured: true,
   },
   {
-    title: 'WordPress Sandbox',
+    title: "Global Git",
     description:
-      'Try any WordPress latest version or debug your plugin here without need to install anything!',
-    url: 'https://wordpress.sulaimanmisri.com',
-    category: 'WordPress',
+      "Simple snippet for me to quickly add, enter message and push to the remote branch. Match with the philosophy of `push often, push early`",
+    url: "https://github.com/msulaimanmisri/sulaiman-setup/tree/main/global-git",
+    category: "Tooling",
     featured: true,
   },
   {
-    title: '2500 Masalah Feqah',
+    title: "Git Guard",
+    description:
+      "A lightweight Git safety guard for deployment workflows that blocks unsafe git pull commands before they happen.",
+    url: "https://github.com/msulaimanmisri/sulaiman-setup/tree/main/git-guard",
+    category: "Tooling",
+    featured: true,
+  },
+  {
+    title: "BacaSekejap",
+    description:
+      "A project that taught me how to build a scalable Web through Two-Tier Architecture and Different Load Balancing Strategy.",
+    url: "https://hantar.sulaimanmisri.com",
+    category: "Laravel",
+    featured: true,
+  },
+  {
+    title: "KiraSekarang",
+    description:
+      "A must-have app to level up your Personal Finance Management. A project that taught me how to handle large transactions.",
+    url: "https://kirasekarang.com",
+    category: "Laravel",
+    featured: true,
+  },
+  {
+    title: "WordPress Sandbox",
+    description:
+      "Try any WordPress latest version or debug your plugin here without need to install anything!",
+    url: "https://wordpress.sulaimanmisri.com",
+    category: "WordPress",
+    featured: true,
+  },
+  {
+    title: "2500 Masalah Feqah",
     description:
       'A simple website to show the content of the book "2500 Masalah Feqah".',
-    url: 'https://2500.sulaimanmisri.com',
-    category: 'Tooling',
+    url: "https://2500.sulaimanmisri.com",
+    category: "Tooling",
   },
   {
-    title: 'Easy Detect',
+    title: "Easy Detect",
     description:
-      'Get exception reports in your Laravel application before your users report them.',
-    url: 'https://github.com/msulaimanmisri/easy-detect',
-    category: 'Laravel',
+      "Get exception reports in your Laravel application before your users report them.",
+    url: "https://github.com/msulaimanmisri/easy-detect",
+    category: "Laravel",
   },
   {
-    title: 'Easy Deploy',
+    title: "Easy Deploy",
     description:
-      'A simple Laravel package to simplify deployment commands. Only one line needed.',
-    url: 'https://github.com/msulaimanmisri/easy-deploy',
-    category: 'Laravel',
+      "A simple Laravel package to simplify deployment commands. Only one line needed.",
+    url: "https://github.com/msulaimanmisri/easy-deploy",
+    category: "Laravel",
   },
   {
-    title: 'Easy Login',
+    title: "Easy Login",
     description:
-      'Add a pre-defined Social Login button in your Laravel application with ease.',
-    url: 'https://github.com/msulaimanmisri/easy-login',
-    category: 'Laravel',
+      "Add a pre-defined Social Login button in your Laravel application with ease.",
+    url: "https://github.com/msulaimanmisri/easy-login",
+    category: "Laravel",
   },
   {
-    title: 'Kelas Design',
-    description: 'Application for you to learn WordPress & Web Development.',
-    url: 'https://kelasdesign.com/?ref=evfiC9vL',
-    category: 'WordPress',
+    title: "Kelas Design",
+    description: "Application for you to learn WordPress & Web Development.",
+    url: "https://kelasdesign.com/?ref=evfiC9vL",
+    category: "WordPress",
   },
   {
-    title: 'Simpan Kerja',
+    title: "Simpan Kerja",
     description:
-      'Track and manage all job application records you have ever applied to.',
-    url: 'https://sk.sulaimanmisri.com',
-    category: 'Tooling',
+      "Track and manage all job application records you have ever applied to.",
+    url: "https://sk.sulaimanmisri.com",
+    category: "Tooling",
   },
   {
-    title: 'Kira Gaji',
+    title: "Kira Gaji",
     description:
-      'Calculate how much salary you gain, and how you can calculate your freelance rate.',
-    url: 'https://kira.sulaimanmisri.com',
-    category: 'Tooling',
+      "Calculate how much salary you gain, and how you can calculate your freelance rate.",
+    url: "https://kira.sulaimanmisri.com",
+    category: "Tooling",
   },
   {
-    title: 'Developer Path',
+    title: "Developer Path",
     description:
-      'A guide for those interested in Web Development but unsure where to start.',
-    url: 'https://dev.sulaimanmisri.com',
-    category: 'Tooling',
+      "A guide for those interested in Web Development but unsure where to start.",
+    url: "https://dev.sulaimanmisri.com",
+    category: "Tooling",
   },
   {
-    title: 'Custom PHP Framework (PHPAegis)',
+    title: "Custom PHP Framework (PHPAegis)",
     description:
-      'A simple PHP Framework I built from scratch. Not published yet — request to see.',
-    url: 'https://github.com/msulaimanmisri',
-    category: 'Laravel',
+      "A simple PHP Framework I built from scratch. Not published yet — request to see.",
+    url: "https://github.com/msulaimanmisri",
+    category: "Laravel",
   },
   {
-    title: 'Pilihan Raya Umum 15',
+    title: "Pilihan Raya Umum 15",
     description:
-      'A simple website to find your chosen candidate based on location selected.',
-    url: 'https://pru15.sulaimanmisri.com',
-    category: 'Tooling',
+      "A simple website to find your chosen candidate based on location selected.",
+    url: "https://pru15.sulaimanmisri.com",
+    category: "Tooling",
   },
   {
-    title: 'Password Generator',
+    title: "Password Generator",
+    description: "Generate a very secure password without saving it.",
+    url: "https://pass.sulaimanmisri.com",
+    category: "Tooling",
+  },
+  {
+    title: "SM Prefetch",
     description:
-      'Generate a very secure password without saving it.',
-    url: 'https://pass.sulaimanmisri.com',
-    category: 'Tooling',
+      "A WordPress plugin that turns your website into a blazing fast one using prefetch technology.",
+    url: "https://wordpress.org/plugins/sm-prefetch",
+    category: "WordPress",
   },
   {
-    title: 'SM Prefetch',
+    title: "SM Scrollbar",
     description:
-      'A WordPress plugin that turns your website into a blazing fast one using prefetch technology.',
-    url: 'https://wordpress.org/plugins/sm-prefetch',
-    category: 'WordPress',
+      "A WordPress plugin that makes your window browser scrollbar look nice.",
+    url: "https://wordpress.org/plugins/sm-scrollbar",
+    category: "WordPress",
   },
   {
-    title: 'SM Scrollbar',
-    description: 'A WordPress plugin that makes your window browser scrollbar look nice.',
-    url: 'https://wordpress.org/plugins/sm-scrollbar',
-    category: 'WordPress',
-  },
-  {
-    title: 'Cari Gambo',
-    description: 'Search any Royalty-Free image through a simple web application.',
-    url: 'https://gambo.sulaimanmisri.com',
-    category: 'Tooling',
-  },
-  {
-    title: 'WordPress Route API',
+    title: "Cari Gambo",
     description:
-      'If you want to fetch data from WordPress via API, use this plugin to make your life easier.',
-    url: 'https://github.com/msulaimanmisri/sm-route-api',
-    category: 'WordPress',
+      "Search any Royalty-Free image through a simple web application.",
+    url: "https://gambo.sulaimanmisri.com",
+    category: "Tooling",
   },
   {
-    title: 'WordPress PWA',
+    title: "WordPress Route API",
     description:
-      'Turns your WordPress site into Desktop or Mobile Apps in a single click.',
-    url: 'https://github.com/msulaimanmisri/sm-make-pwa',
-    category: 'WordPress',
+      "If you want to fetch data from WordPress via API, use this plugin to make your life easier.",
+    url: "https://github.com/msulaimanmisri/sm-route-api",
+    category: "WordPress",
   },
   {
-    title: 'WooCommerce Redirect',
+    title: "WordPress PWA",
     description:
-      'Redirect customers to Checkout without loading the Cart page.',
-    url: 'https://github.com/msulaimanmisri/wp-woo-redirect-checkout',
-    category: 'WordPress',
+      "Turns your WordPress site into Desktop or Mobile Apps in a single click.",
+    url: "https://github.com/msulaimanmisri/sm-make-pwa",
+    category: "WordPress",
   },
   {
-    title: 'WordPress Custom Analytics',
+    title: "WooCommerce Redirect",
     description:
-      'Print out how many people have visited your website using the shortcode [sm_tracking].',
-    url: 'https://github.com/msulaimanmisri/sm-custom-analytics',
-    category: 'WordPress',
+      "Redirect customers to Checkout without loading the Cart page.",
+    url: "https://github.com/msulaimanmisri/wp-woo-redirect-checkout",
+    category: "WordPress",
   },
   {
-    title: 'WordPress Debug',
+    title: "WordPress Custom Analytics",
     description:
-      'A plugin that flips WP_DEBUG to true and surfaces errors in the dashboard.',
-    url: 'https://github.com/msulaimanmisri/SM-Error-Log',
-    category: 'WordPress',
+      "Print out how many people have visited your website using the shortcode [sm_tracking].",
+    url: "https://github.com/msulaimanmisri/sm-custom-analytics",
+    category: "WordPress",
   },
   {
-    title: 'Belajar surah dalam Al-Quran',
-    description: 'A simple website that helps adults and children learn surahs in Al-Quran.',
-    url: 'https://belajar-alquran.sulaimanmisri.com',
-    category: 'Tooling',
+    title: "WordPress Debug",
+    description:
+      "A plugin that flips WP_DEBUG to true and surfaces errors in the dashboard.",
+    url: "https://github.com/msulaimanmisri/SM-Error-Log",
+    category: "WordPress",
   },
   {
-    title: 'Expenses Tracker',
-    description: 'Track your expenses today — fail to do so, and you bocor yourself every month.',
-    url: 'https://vue-tracker-nu.vercel.app',
-    category: 'Vue',
+    title: "Belajar surah dalam Al-Quran",
+    description:
+      "A simple website that helps adults and children learn surahs in Al-Quran.",
+    url: "https://belajar-alquran.sulaimanmisri.com",
+    category: "Tooling",
   },
   {
-    title: 'Border Generator',
-    description: 'Create a border with ease using this simple application.',
-    url: 'https://vue-border.vercel.app',
-    category: 'Vue',
+    title: "Expenses Tracker",
+    description:
+      "Track your expenses today — fail to do so, and you bocor yourself every month.",
+    url: "https://vue-tracker-nu.vercel.app",
+    category: "Vue",
   },
   {
-    title: 'DigiVel',
-    description: 'Search your favorite Digimon data via API.',
-    url: 'https://digivel.sulaimanmisri.com',
-    category: 'Tooling',
+    title: "Border Generator",
+    description: "Create a border with ease using this simple application.",
+    url: "https://vue-border.vercel.app",
+    category: "Vue",
   },
-]
+  {
+    title: "DigiVel",
+    description: "Search your favorite Digimon data via API.",
+    url: "https://digivel.sulaimanmisri.com",
+    category: "Tooling",
+  },
+];
 
-export const personalProjectCategories = ['All', 'Laravel', 'Vue', 'WordPress', 'Tooling']
+export const personalProjectCategories = [
+  "All",
+  "Laravel",
+  "Vue",
+  "WordPress",
+  "Tooling",
+];
 
 /** The three surfaced on the home page as "Selected Work". */
-export const featuredPersonalProjects = personalProjects.filter((p) => p.featured)
+export const featuredPersonalProjects = personalProjects.filter(
+  (p) => p.featured,
+);

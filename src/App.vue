@@ -82,7 +82,7 @@ const close = () => {
       <!-- Desktop CTAs -->
       <div class="hidden items-center gap-2 md:flex">
         <a
-          href="mailto:hello@sulaimanmisri.com"
+          href="https://www.linkedin.com/in/msulaimanmisri/" target="_blank"
           class="group inline-flex items-center gap-2 rounded-full border border-hairline-strong bg-transparent px-4 py-2 font-sans text-xs font-medium text-text transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-text active:scale-[0.98]"
         >
           Get in touch
@@ -170,7 +170,7 @@ const close = () => {
           }"
         >
           <a
-            href="mailto:hello@sulaimanmisri.com"
+            href="https://www.linkedin.com/in/msulaimanmisri/" target="_blank"
             class="block rounded-full border border-hairline-strong px-6 py-3 text-center font-sans text-sm font-medium text-text"
             @click="close"
           >

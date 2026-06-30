@@ -22,6 +22,14 @@ const counts = computed(() => {
 
 <template>
   <div class="relative mx-auto w-full max-w-7xl px-5 pb-24 pt-40 md:px-8 md:pt-48 lg:pb-32 lg:pt-56">
+    <!-- Hero background -->
+    <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+      <div
+        class="absolute inset-0"
+        style="background: radial-gradient(55% 55% at 50% 40%, rgba(250,250,250,0.04) 0%, transparent 100%)"
+      ></div>
+      <div class="beam-bg absolute inset-0 opacity-[0.12] blur-[30px]"></div>
+    </div>
     <header class="max-w-5xl">
       <p class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute motion-reveal">
         <span class="mr-2">03</span>Work

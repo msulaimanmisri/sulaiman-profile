@@ -32,7 +32,7 @@ defineProps({
         </p>
         <footer class="flex items-center justify-between border-t border-hairline pt-4">
           <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-text-mute">
-            Last commit
+            Niche
           </span>
           <span class="font-mono text-xs text-text-soft">{{ caption }}</span>
         </footer>
