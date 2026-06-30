@@ -32,6 +32,7 @@ const latestWriting = ref([
   { title: 'How I Smashed Image Compression in Laravel Using Node.js', url: 'https://dev.to/msulaimanmisri/how-i-smashed-image-compression-in-laravel-using-nodejs-4pgb' },
   { title: 'SDD is now my go-to when developing a Website / Software', url: 'https://dev.to/msulaimanmisri/sdd-is-now-my-go-to-when-developing-a-website-software-4feh' },
   { title: 'Embracing Agile, Scrum, and Kanban in Project Management: A Personal Journey', url: 'https://dev.to/msulaimanmisri/embracing-agile-scrum-and-kanban-in-project-management-a-personal-journey-54jn' },
+  { title: 'Menolak Inovasi?', url: 'https://www.linkedin.com/posts/activity-7401576060376780800-QesR?utm_source=share&utm_medium=member_desktop&rcm=ACoAACXBkLUB7Gl6S0paX_H4D637xIwmeDQqN74' },
 ])
 </script>
 
@@ -161,7 +162,7 @@ const latestWriting = ref([
         <article
           v-for="(project, i) in featuredProjects"
           :key="project.title"
-          class="group relative rounded-[1.5rem] border border-hairline bg-surface p-6 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-[2px] hover:border-hairline-strong md:p-7"
+          class="group relative rounded-[1.5rem] border border-hairline bg-surface p-6 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 hover:border-hairline-strong md:p-7"
           :style="{ '--stagger-delay': `${i * 80}ms` }"
         >
           <div class="flex h-full flex-col gap-6">
@@ -249,7 +250,7 @@ const latestWriting = ref([
             <svg
               viewBox="0 0 16 16"
               fill="none"
-              class="h-4 w-4 flex-shrink-0 text-text-mute transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-1 group-hover:text-text"
+              class="h-4 w-4 shrink-0 text-text-mute transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-1 group-hover:text-text"
               aria-hidden="true"
             >
               <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />

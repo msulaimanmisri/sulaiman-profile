@@ -32,6 +32,13 @@ export const personalProjects = [
     featured: true,
   },
   {
+    title: "10k Request Architecture",
+    description:
+      "Strategic plan to handle 10k requests per second with Laravel Application. This architecture combine multiple services to achieve the goal.",
+    url: "https://drive.google.com/drive/folders/1prVXCCFy_Nq4mX_tNJWMholRw2pjtOmY?usp=drive_link",
+    category: "Architecture",
+  },
+  {
     title: "BacaSekejap",
     description:
       "A project that taught me how to build a scalable Web through Two-Tier Architecture and Different Load Balancing Strategy.",

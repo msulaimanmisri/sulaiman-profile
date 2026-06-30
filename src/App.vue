@@ -107,11 +107,12 @@ const close = () => {
       >
         <span
           class="absolute h-px w-4 bg-text transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
-          :class="isOpen ? 'translate-y-0 rotate-45' : '-translate-y-[3px]'"
+          :class="isOpen ? 'translate-y-0 rotate-45' : '-translate-y-0.75'"
         ></span>
+        
         <span
           class="absolute h-px w-4 bg-text transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
-          :class="isOpen ? 'translate-y-0 -rotate-45' : 'translate-y-[3px]'"
+          :class="isOpen ? 'translate-y-0 -rotate-45' : 'translate-y-0.75'"
         ></span>
       </button>
     </nav>

@@ -36,7 +36,8 @@ const categories = [
     title: 'Frontend',
     blurb: 'Taste matters at the edge.',
     items: [
-      { name: 'Vue 3 (Composition API)', tier: 'daily' },
+      { name: 'Vue.js (Composition API)', tier: 'daily' },
+      { name: 'React.js', tier: 'exposure' },
       { name: 'Tailwind CSS', tier: 'daily' },
       { name: 'Alpine.js', tier: 'comfortable' },
       { name: 'Vite', tier: 'daily' },
@@ -136,7 +137,7 @@ const categories = [
 
     <!-- Bento · 12-col grid -->
     <section
-      class="mt-10 grid grid-cols-1 gap-3 md:mt-14 md:auto-rows-[minmax(0,1fr)] md:grid-cols-12 motion-reveal-stagger is-revealed"
+      class="mt-10 grid grid-cols-1 gap-3 md:mt-14 md:auto-rows-fr md:grid-cols-12 motion-reveal-stagger is-revealed"
     >
       <article
         v-for="(cat, i) in categories"
@@ -149,7 +150,7 @@ const categories = [
         :style="{ '--stagger-delay': `${i * 80}ms` }"
       >
         <div
-          class="group relative h-full rounded-[1.5rem] border border-hairline bg-surface p-7 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-[2px] hover:border-hairline-strong md:p-8"
+          class="group relative h-full rounded-[1.5rem] border border-hairline bg-surface p-7 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-0.5 hover:border-hairline-strong md:p-8"
         >
           <div class="flex h-full flex-col gap-5">
             <header class="flex items-center justify-between">

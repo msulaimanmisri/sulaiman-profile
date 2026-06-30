@@ -90,6 +90,40 @@ const principles = [
       </aside>
     </div>
 
+    <!-- Image gallery -->
+    <section class="mt-20 md:mt-28 motion-reveal">
+      <div class="flex gap-3 overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden sm:grid sm:grid-cols-2 md:grid-cols-4 sm:gap-3 md:gap-4">
+        <div class="shrink-0 w-[80vw] snap-center sm:w-auto sm:snap-none overflow-hidden rounded-[1.5rem] bg-surface">
+          <img
+            src="/images/lead-1.jpg"
+            alt="Sulaiman portrait"
+            class="aspect-3/4 w-full origin-center object-cover transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.03]"
+          />
+        </div>
+        <div class="shrink-0 w-[80vw] snap-center sm:w-auto sm:snap-none overflow-hidden rounded-[1.5rem] bg-surface">
+          <img
+            src="/images/lead-2.jpg"
+            alt="Sulaiman portrait"
+            class="aspect-3/4 w-full origin-center object-cover transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.03]"
+          />
+        </div>
+        <div class="shrink-0 w-[80vw] snap-center sm:w-auto sm:snap-none overflow-hidden rounded-[1.5rem] bg-surface">
+          <img
+            src="/images/sulaiman-lead-dev.jpg"
+            alt="Sulaiman working"
+            class="aspect-3/4 w-full origin-center object-cover transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.03]"
+          />
+        </div>
+        <div class="shrink-0 w-[80vw] snap-center sm:w-auto sm:snap-none overflow-hidden rounded-[1.5rem] bg-surface">
+          <img
+            src="/images/sulaiman-devops.png"
+            alt="Sulaiman devops"
+            class="aspect-3/4 w-full origin-center object-cover transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:scale-[1.03]"
+          />
+        </div>
+      </div>
+    </section>
+
     <!-- Asymmetrical Bento -->
     <section class="mt-20 grid grid-cols-1 gap-3 md:mt-28 md:grid-cols-12 motion-reveal-stagger is-revealed">
       <!-- A · What I do (wide) -->
@@ -125,7 +159,7 @@ const principles = [
               Kuala Lumpur
             </p>
             <p class="font-sans text-sm text-text-soft">
-              Remote · GMT+8 · Available for travel.
+              Hybrid/Remote · GMT+8
             </p>
           </div>
         </div>
@@ -142,7 +176,7 @@ const principles = [
               4
             </p>
             <p class="font-mono text-xs text-text-soft">
-              PHP · JS/TS · Bash · SQL
+              PHP · JS · Bash · SQL
             </p>
           </div>
         </div>
@@ -156,28 +190,15 @@ const principles = [
               D · Philosophy
             </span>
             <h3 class="font-sans text-3xl font-medium leading-tight tracking-tight text-text md:text-4xl">
-              Three things I keep coming back to.
+              Push often, Push early. Break things, but learn them well.
             </h3>
-            <ol class="space-y-5">
-              <li
-                v-for="(principle, i) in principles"
-                :key="principle"
-                class="flex items-start gap-4 border-b border-hairline pb-5 last:border-b-0 last:pb-0"
-              >
-                <span class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute">
-                  {{ String(i + 1).padStart(2, '0') }}
-                </span>
-                <span class="font-sans text-base leading-relaxed text-text-soft">
-                  {{ principle }}
-                </span>
-              </li>
-            </ol>
+            
           </div>
         </div>
       </article>
 
       <!-- E · Speaking -->
-      <article class="md:col-span-4" :style="{ '--stagger-delay': '320ms' }">
+      <article class="md:col-span-4 md:row-span-2" :style="{ '--stagger-delay': '320ms' }">
         <div class="group relative h-full rounded-[1.5rem] border border-hairline bg-surface p-7 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-hairline-strong">
           <div class="flex h-full flex-col gap-3">
             <span class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute">
@@ -187,26 +208,27 @@ const principles = [
               Talks
             </p>
             <ul class="space-y-1 font-sans text-sm text-text-soft">
-              <li>· WordCamp Malaysia</li>
-              <li>· WP Malaysia Meetup</li>
-              <li>· Local dev community events</li>
+              <li>· WordCamp Malaysia </li>
+              <li>· WP Malaysia Meetup </li>
+              <li>· Local dev community events </li>
+              <li>· Internal sharing session </li>
             </ul>
           </div>
         </div>
       </article>
 
       <!-- F · Mentoring -->
-      <article class="md:col-span-4" :style="{ '--stagger-delay': '400ms' }">
+      <article class="md:col-span-4 md:row-span-2" :style="{ '--stagger-delay': '400ms' }">
         <div class="group relative h-full rounded-[1.5rem] border border-hairline bg-surface p-7 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-hairline-strong">
           <div class="flex h-full flex-col gap-3">
             <span class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute">
               F · Mentoring
             </span>
             <p class="font-sans text-7xl font-medium leading-none tracking-[-0.03em] text-text">
-              50+
+              1,200 +
             </p>
             <p class="font-sans text-sm text-text-soft">
-              Developers mentored in WordPress &amp; web engineering.
+              Developers mentored in WordPress &amp; web engineering since 2015 (online, in-person &amp; training).
             </p>
           </div>
         </div>
