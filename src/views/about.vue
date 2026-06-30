@@ -64,6 +64,22 @@ const principles = [
             development — both in-person and online — and has spoken at official WordPress
             gatherings in Malaysia.
           </p>
+          <p>
+            Sulaiman is currently going deep into DevOps and sharpening his skills on AI
+            so that he can become an AI Native Engineer (AINE).<sup class="footnote-ref" id="fn-aine-ref"><a href="#fn-aine">*</a></sup>
+          </p>
+        </div>
+        <div class="mt-8 border-t border-hairline pt-4 text-[14px] leading-relaxed text-orange-400/50">
+          <p id="fn-aine">
+            <sup class="footnote-ref"><a href="#fn-aine-ref">*</a></sup>
+            <strong>AI-Native Engineering (AINE)</strong> — AI-Native Engineering is how you build real software with AI agents in the loop at every step, while you (the human) stay in charge of the parts that matter: what to build, what the limits are, and whether the result is good. It is not vibe coding. It is not prompt engineering with a fresh name. It is a real workflow for engineers who already ship real systems and now want to ship them with an AI doing most of the typing.
+            <a
+              href="https://alfonsograziano.it/blog/what-is-ai-native-engineering"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline transition-colors hover:text-text"
+            >Source</a>
+          </p>
         </div>
       </div>
 

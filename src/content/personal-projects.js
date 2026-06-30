@@ -93,8 +93,8 @@ export const personalProjects = [
   {
     title: "Kelas Design",
     description: "Application for you to learn WordPress & Web Development.",
-    url: "https://kelasdesign.com/?ref=evfiC9vL",
-    category: "WordPress",
+    url: "https://web.archive.org/web/20241008102544/https://kelasdesign.com",
+    category: "Laravel",
   },
   {
     title: "Simpan Kerja",
@@ -121,8 +121,8 @@ export const personalProjects = [
     title: "Custom PHP Framework (PHPAegis)",
     description:
       "A simple PHP Framework I built from scratch. Not published yet — request to see.",
-    url: "https://github.com/msulaimanmisri",
-    category: "Laravel",
+    url: "https://github.com/msulaimanmisri/php-aegis/",
+    category: "Framework",
   },
   {
     title: "Pilihan Raya Umum 15",
@@ -223,10 +223,12 @@ export const personalProjects = [
 
 export const personalProjectCategories = [
   "All",
+  "Framework",
   "Laravel",
   "Vue",
   "WordPress",
   "Tooling",
+  "Architecture",
 ];
 
 /** The three surfaced on the home page as "Selected Work". */

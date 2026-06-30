@@ -6,10 +6,10 @@ import now from '../content/now.json'
 
 const featuredProjects = [
   {
-    title: 'BacaSekejap',
+    title: 'Kelas Design',
     description:
-      'Two-tier architecture with different load balancing strategies. A lesson in scaling Laravel under real traffic.',
-    url: 'https://hantar.sulaimanmisri.com',
+      'I built this project to help people learn WordPress and Web Development in a structured way. Now its archived. But still accessible through Wayback Machine.',
+    url: "https://web.archive.org/web/20241008102544/https://kelasdesign.com",
     category: 'Laravel',
   },
   {

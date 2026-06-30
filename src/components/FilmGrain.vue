@@ -9,7 +9,7 @@
 <template>
   <div
     aria-hidden="true"
-    class="pointer-events-none fixed inset-0 z-50 opacity-[0.2] mix-blend-overlay"
+    class="pointer-events-none fixed inset-0 z-50 opacity-[0.19] mix-blend-overlay"
     style="
       background:
         repeating-radial-gradient(#000 0 0.0001%, #fff 0 0.0002%) 50% 50%/3000px 3000px,
