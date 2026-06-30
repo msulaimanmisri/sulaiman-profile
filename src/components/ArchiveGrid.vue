@@ -1,6 +1,7 @@
 <script setup>
 defineProps({
   items: { type: Array, required: true },
+  showComingSoon: { type: Boolean, default: false },
 })
 </script>
 
@@ -43,7 +44,10 @@ defineProps({
               <path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </template>
-          <span v-else class="font-mono text-[10px] uppercase tracking-[0.2em] text-orange-400/50">
+          <span
+            v-else-if="showComingSoon"
+            class="font-mono text-[10px] uppercase tracking-[0.2em] text-orange-400/50"
+          >
             Coming soon
           </span>
         </div>

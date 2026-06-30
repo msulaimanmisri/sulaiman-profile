@@ -60,7 +60,7 @@ const counts = computed(() => {
     </div>
 
     <section class="mt-10 md:mt-12">
-      <ArchiveGrid :items="filteredProjects" />
+      <ArchiveGrid :items="filteredProjects" showComingSoon />
     </section>
 
     <div
