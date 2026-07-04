@@ -12,6 +12,7 @@ const isOpen = ref(false)
 const navLinks = [
   { name: 'about.index', label: 'About' },
   { name: 'stack.index', label: 'Stack' },
+  { name: 'experience.index', label: 'Experience' },
   { name: 'project.index', label: 'Work' },
   { name: 'personal-project.index', label: 'Project' },
   { href: 'https://dev.to/msulaimanmisri', label: 'Writing', external: true },

@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const Home = () => import('../views/home.vue')
 const About = () => import('../views/about.vue')
 const Stack = () => import('../views/stack.vue')
+const Experience = () => import('../views/experience.vue')
 const Project = () => import('../views/project.vue')
 const PersonalProject = () => import('../views/personal-project.vue')
 
@@ -23,6 +24,12 @@ const routes = [
         path: '/stack',
         name: 'stack.index',
         component: Stack,
+    },
+
+    {
+        path: '/experience',
+        name: 'experience.index',
+        component: Experience,
     },
 
     {
