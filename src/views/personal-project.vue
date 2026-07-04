@@ -35,7 +35,7 @@ const counts = computed(() => {
     </div>
     <header class="max-w-5xl">
       <p class="font-mono text-[10px] font-medium uppercase tracking-[0.2em] text-text-mute">
-        <span class="mr-2">04</span>Personal projects
+        <span class="mr-2">05</span>Personal projects
       </p>
       <h1
         class="mt-6 font-sans text-5xl font-medium leading-[1.02] tracking-[-0.04em] text-text sm:text-6xl md:mt-8 md:text-7xl lg:text-[5.5rem]"
