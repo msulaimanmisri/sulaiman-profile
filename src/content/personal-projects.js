@@ -3,7 +3,7 @@ export const personalProjects = [
     title: "KunciMasuk Desktop App",
     description:
       "Save and manage SSH server configurations and connect with one click. Support AWS EC2 Instance Connect Endpoint (EICE) tunnels.",
-    url: "",
+    url: "https://kuncimasuk.sulaimanmisri.com",
     category: "Tooling",
     featured: true,
   },
