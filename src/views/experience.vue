@@ -1,5 +1,5 @@
 <script setup>
-  import experience from '../content/experience.json'
+  import experience from '../content/experience.js'
 </script>
 
 <template>

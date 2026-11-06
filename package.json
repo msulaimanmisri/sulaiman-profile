@@ -6,13 +6,18 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "mcp:dev": "node scripts/mcp-dev.mjs",
+    "mcp:smoke": "node scripts/mcp-smoke.mjs",
+    "mcp:inspect": "npx -y @modelcontextprotocol/inspector"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.23",
+    "@modelcontextprotocol/sdk": "^1.32.2",
     "axios": "^1.18.1",
     "vue": "^3.5.0",
-    "vue-router": "^5.1.0"
+    "vue-router": "^5.1.0",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",

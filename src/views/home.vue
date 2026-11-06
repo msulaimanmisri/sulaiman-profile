@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import EyebrowTag from '../components/EyebrowTag.vue'
 import StatCard from '../components/StatCard.vue'
-import now from '../content/now.json'
+import now from '../content/now.js'
 
 const featuredProjects = [
   {
