@@ -1,5 +1,13 @@
 export const personalProjects = [
   {
+    title: "Tanyalah Sulaiman",
+    description:
+      "A public ask-me-anything site where an LLM answers from RAG knowledge file. This project is for me to demonstrate my AI Skillset.",
+    url: "https://tanyalah.sulaimanmisri.com",
+    category: "Vue",
+    featured: true,
+  },
+  {
     title: "KunciMasuk Desktop App",
     description:
       "Save and manage SSH server configurations and connect with one click. Support AWS EC2 Instance Connect Endpoint (EICE) tunnels.",
